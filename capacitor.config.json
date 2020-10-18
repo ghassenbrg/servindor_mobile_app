@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.servindor",
   "appName": "Servindor",
   "bundledWebRuntime": false,
   "npmClient": "npm",
