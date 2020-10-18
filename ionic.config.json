@@ -1,0 +1,7 @@
+{
+  "name": "Servindor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
