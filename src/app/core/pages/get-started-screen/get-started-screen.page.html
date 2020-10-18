@@ -1,0 +1,16 @@
+<ion-content>
+  <ion-slides [options]="slideOpts" (ionSlideNextStart)="slideDidChange()" #slides>
+    <ion-slide>
+      <h1>Slide 1</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 3</h1>
+    </ion-slide>
+  </ion-slides>
+  
+  <ion-button *ngIf="slidesLength > currentSlideIndex + 1" (click)="slides.slideNext()">Next</ion-button>
+  <ion-button *ngIf="slidesLength == currentSlideIndex + 1" (click)="navigateToLogin()">Get Started</ion-button>
+</ion-content>

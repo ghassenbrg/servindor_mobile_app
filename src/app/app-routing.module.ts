@@ -11,6 +11,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'get-started',
+    loadChildren: () => import('./core/pages/get-started-screen/get-started-screen.module').then( m => m.GetStartedScreenPageModule)
   }
 ];
 @NgModule({
