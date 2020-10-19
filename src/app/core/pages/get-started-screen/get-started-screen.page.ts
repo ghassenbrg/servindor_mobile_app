@@ -14,7 +14,8 @@ export class GetStartedScreenPage implements OnInit {
   slidesLength: number;
   slideOpts = {
     initialSlide: 0,
-    speed: 400
+    speed: 400,
+    autoHeight: false
   };
   
 

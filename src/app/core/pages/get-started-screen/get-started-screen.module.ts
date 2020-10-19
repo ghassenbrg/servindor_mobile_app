@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { GetStartedScreenPageRoutingModule } from './get-started-screen-routing.module';
 
 import { GetStartedScreenPage } from './get-started-screen.page';
+import { StepComponent } from './step/step.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { GetStartedScreenPage } from './get-started-screen.page';
     IonicModule,
     GetStartedScreenPageRoutingModule
   ],
-  declarations: [GetStartedScreenPage]
+  declarations: [GetStartedScreenPage, StepComponent]
 })
 export class GetStartedScreenPageModule {}

@@ -1,16 +1,52 @@
 <ion-content>
-  <ion-slides [options]="slideOpts" (ionSlideNextStart)="slideDidChange()" #slides>
-    <ion-slide>
-      <h1>Slide 1</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
-    </ion-slide>
-  </ion-slides>
-  
-  <ion-button *ngIf="slidesLength > currentSlideIndex + 1" (click)="slides.slideNext()">Next</ion-button>
-  <ion-button *ngIf="slidesLength == currentSlideIndex + 1" (click)="navigateToLogin()">Get Started</ion-button>
+  <div class="custom-box">
+    <div class="custom-slides">
+      <div class="custom-container" style="height: 100%;">
+        <div class="custom-wrapper" style="height: 100%;">
+          <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
+          <br><br>
+          <div style="width: 100vw;">
+            <ion-slides [options]="slideOpts" (ionSlidePrevStart)="slideDidChange()"
+              (ionSlideNextStart)="slideDidChange()" #slides>
+              <ion-slide>
+                <app-step title="Find Your Needed Service"
+                  description="Find your needed service from our existing location easily"
+                  imgUrl="./assets/img/get-started/step0.png"></app-step>
+              </ion-slide>
+              <ion-slide>
+                <app-step title="Find Your Needed Service"
+                  description="Find your needed service from our existing location easily"
+                  imgUrl="./assets/img/get-started/step1.png"></app-step>
+              </ion-slide>
+              <ion-slide>
+                <app-step title="Find Your Needed Service"
+                  description="Find your needed service from our existing location easily"
+                  imgUrl="./assets/img/get-started/step2.png"></app-step>
+              </ion-slide>
+            </ion-slides>
+          </div>
+        </div>
+        <div class="bg">
+          <img src="./assets/img/get-started/bg.png" style="width: 100vw; height: 60vh;">
+        </div>
+      </div>
+    </div>
+    <div class="custom-actions">
+      <div class="actions" style="height: auto;">
+        <div class="row align-items-center" *ngIf="slidesLength > currentSlideIndex + 1">
+          <div class="col">
+            <i class="fas fa-circle" [ngClass]="currentSlideIndex == 0? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot-margin" [ngClass]="currentSlideIndex == 1? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot-margin" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
+          </div>
+          <div class="col">
+            <ion-button mode="ios" style="width: 100%;" (click)="slides.slideNext()">Next</ion-button>
+          </div>
+        </div>
+        <ion-button mode="ios" style="width: 100%;" *ngIf="slidesLength == currentSlideIndex + 1"
+          (click)="navigateToLogin()">Get Started</ion-button>
+      </div>
+    </div>
+  </div>
+
 </ion-content>
