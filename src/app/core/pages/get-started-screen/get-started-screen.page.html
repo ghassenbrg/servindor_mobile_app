@@ -35,15 +35,15 @@
       <div class="actions" style="height: auto;">
         <div class="row align-items-center" *ngIf="slidesLength > currentSlideIndex + 1">
           <div class="col">
-            <i class="fas fa-circle" [ngClass]="currentSlideIndex == 0? 'active-dot': 'inactive-dot'"></i>
-            <i class="fas fa-circle dot-margin" [ngClass]="currentSlideIndex == 1? 'active-dot': 'inactive-dot'"></i>
-            <i class="fas fa-circle dot-margin" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot" [ngClass]="currentSlideIndex == 0? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot dot-margin" [ngClass]="currentSlideIndex == 1? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot dot-margin" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
           </div>
           <div class="col">
-            <ion-button mode="ios" style="width: 100%;" (click)="slides.slideNext()">Next</ion-button>
+            <ion-button expand="block" (click)="slides.slideNext()">Next</ion-button>
           </div>
         </div>
-        <ion-button mode="ios" style="width: 100%;" *ngIf="slidesLength == currentSlideIndex + 1"
+        <ion-button expand="block" *ngIf="slidesLength == currentSlideIndex + 1"
           (click)="navigateToLogin()">Get Started</ion-button>
       </div>
     </div>
