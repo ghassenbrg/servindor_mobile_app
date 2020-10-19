@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'get-started',
     loadChildren: () => import('./core/pages/get-started-screen/get-started-screen.module').then( m => m.GetStartedScreenPageModule)
+  },
+  {
+    path: 'language',
+    loadChildren: () => import('./core/pages/choose-language-screen/choose-language-screen.module').then( m => m.ChooseLanguageScreenPageModule)
   }
 ];
 @NgModule({

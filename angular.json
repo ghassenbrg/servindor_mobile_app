@@ -43,6 +43,9 @@
               },
               {
                 "input": "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              },
+              {
+                "input": "node_modules/flag-icon-css/css/flag-icon.min.css"
               }
             ],
             "scripts": []

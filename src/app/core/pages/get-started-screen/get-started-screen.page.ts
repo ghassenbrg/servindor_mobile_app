@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonSlides } from '@ionic/angular';
+import { GeneralConfig } from '../../models/generalConfig.model';
+import { StorageApiService } from '../../services/Storage/storage-api.service';
 
 @Component({
   selector: 'app-get-started-screen',
@@ -8,6 +10,8 @@ import { IonSlides } from '@ionic/angular';
   styleUrls: ['./get-started-screen.page.scss'],
 })
 export class GetStartedScreenPage implements OnInit {
+
+  generalConfig: GeneralConfig;
 
   @ViewChild(IonSlides, { static: false }) slides: IonSlides;
   currentSlideIndex: number;
@@ -19,9 +23,19 @@ export class GetStartedScreenPage implements OnInit {
   };
   
 
-  constructor(public router: Router) { }
+  constructor(
+    public router: Router,
+    private _storageApiService: StorageApiService
+    ) { }
 
   ngOnInit() {
+    this._storageApiService.getGeneralConfig().then(config => {
+      if (config) {
+        this.generalConfig = config;
+      } else {
+        this.generalConfig = new GeneralConfig;
+      }
+    })
   }
 
   ngAfterViewInit() {
@@ -33,8 +47,11 @@ export class GetStartedScreenPage implements OnInit {
     this.slides.length().then(length => this.slidesLength = length)
   };
 
-  navigateToLogin() {
-    this.router.navigate(['/login']);
+  doGetStarted() {
+    this.generalConfig.alreadyVisited = true;
+    this._storageApiService.setGeneralConfig(this.generalConfig).then(res => {
+      this.router.navigate(['/']);
+    });
   }
 
 }

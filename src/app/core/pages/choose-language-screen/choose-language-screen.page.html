@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="custom-container">
+    <div class="custom-wrapper">
+      <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
+      <br><br>
+      <div class="custom-padding">
+        <img src="./assets/img/get-started/choose-language.png" style="max-width: 100%; max-height: 20vh;">
+      </div>
+    </div>
+    <div class="bg">
+      <img src="./assets/img/get-started/bg.png" style="width: 100vw; height: 40vh;">
+    </div>
+  </div>
+  <div class="custom-padding" style="height: auto; padding-top: 0;">
+    <div class="text">
+      <h2>Language</h2>
+      <p>Please choose your preferred display language.</p>
+    </div>
+    <div class="row">
+      <div class="col-6" style="padding: 0;" *ngFor="let language of languages">
+        <ion-card (click)="onSelectLanguage(language.value)">
+          <ion-card-content style="text-align: center;"
+            [ngClass]="language.value == selectedLanguage? 'selected-language': ''">
+            <i class="flag-icon-squared custom-flag-icon" [ngClass]="'flag-icon flag-icon-' + language.icon"></i>
+            <h2> {{language.label}} </h2>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <!-- <ion-select value="EN" interface="action-sheet">
+      <ion-select-option value="EN">English</ion-select-option>
+      <ion-select-option value="FR">French</ion-select-option>
+      <ion-select-option value="AR">Arabic</ion-select-option>
+      <ion-select-option value="TN">Tunisian Darija</ion-select-option>
+    </ion-select> -->
+    <br>
+    <ion-button expand="block" (click)="doConfirm()">Confirm</ion-button>
+  </div>
+
+</ion-content>
