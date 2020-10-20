@@ -11,17 +11,18 @@ import { AuthenticationService } from '../../services/authentication/authenticat
 export class LoginScreenPage implements OnInit {
 
   loginForm: FormGroup;
+  passwordVisibilty: boolean = false;
 
   constructor(
     public router: Router,
     private _authService: AuthenticationService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
-  });
+    });
   }
 
   doLogin() {
@@ -43,6 +44,10 @@ export class LoginScreenPage implements OnInit {
 
   doForgotPassword() {
     console.log('Forgot Password')
+  }
+
+  changePasswordVisibilty() {
+    this.passwordVisibilty = !this.passwordVisibilty;
   }
 
 }

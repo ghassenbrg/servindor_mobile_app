@@ -35,14 +35,25 @@
               <form [formGroup]="loginForm">
                 <ion-input class="primary-margin-top" placeholder="Username" formControlName="username" type="text">
                 </ion-input>
-                <ion-input class="primary-margin-top" ui-show-password placeholder="Password" formControlName="password" type="password">
-                </ion-input>
+                <div class="row align-items-center primary-margin-top">
+                  <div class="col" style="padding-right: 0;">
+                    <ion-input ui-show-password placeholder="Password" formControlName="password"
+                      [type]="passwordVisibilty? 'text': 'password'">
+                    </ion-input>
+                  </div>
+                  <div class="col-2">
+                    <ion-button class="secondary-btn" (click)="changePasswordVisibilty()">
+                      <ion-icon *ngIf="passwordVisibilty" name="eye-outline"></ion-icon>
+                      <ion-icon *ngIf="!passwordVisibilty" name="eye-off-outline"></ion-icon>
+                    </ion-button>
+                  </div>
+                </div>
               </form>
               <div class="primary-margin-top">
                 <ion-button (click)="doLogin()">Login</ion-button>
               </div>
               <div style="padding-top: 10px; text-align: center;">
-                <h5 class="no-margin"  (click)="doForgotPassword()">Forgot Password ?</h5>
+                <h5 class="no-margin" (click)="doForgotPassword()">Forgot Password ?</h5>
               </div>
               <div class="primary-margin-top">
                 <ion-button class="secondary-btn" (click)="doRegister()">No Account ? Register Now</ion-button>
