@@ -1,15 +1,18 @@
 .custom-container {
     position: relative;
 }
+
 .custom-wrapper {
     background-color: transparent;
     position: absolute;
     text-align: center;
 }
+
 .bg {
     top: 0;
     left: 0;
 }
+
 .actions {
     padding: 20px;
 }
@@ -33,6 +36,7 @@
 .content {
     padding: 20px;
 }
+
 .text {
     margin-top: 70px;
 }
@@ -41,18 +45,18 @@
     display: flex;
     flex-flow: column;
     height: 100%;
-  }
+}
 
-  .custom-box .custom-actions {
+.custom-box .custom-actions {
     flex: 0 1 auto;
-    
+
     /* The above is shorthand for:
     flex-grow: 0,
     flex-shrink: 1,
     flex-basis: auto
     */
-  }
-  
-  .custom-box .custom-slides {
+}
+
+.custom-box .custom-slides {
     flex: 1 1 auto;
-  }
+}

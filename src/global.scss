@@ -28,7 +28,5 @@
 /* overrided style of ionic components */
 @import "./theme/overrided-style.scss";
 
-/* css */
-.priamry-padding {
-    padding: 20px;
-}
+/* custom global style */
+@import "./theme/custom-style.scss";

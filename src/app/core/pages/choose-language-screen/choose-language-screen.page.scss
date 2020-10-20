@@ -46,6 +46,26 @@
     color: white;
 }
 
+.custom-box {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.custom-box .custom-header {
+    flex: 0 1 auto;
+
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+
+.custom-box .custom-body {
+    flex: 1 1 auto;
+}
+
 /* display flags in dropdown */
 .custom-flag-icon {
     font-size: 2em;
