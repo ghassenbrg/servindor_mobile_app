@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'language',
     loadChildren: () => import('./core/pages/choose-language-screen/choose-language-screen.module').then( m => m.ChooseLanguageScreenPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./core/pages/register-screen/register-screen.module').then( m => m.RegisterScreenPageModule)
   }
 ];
 @NgModule({

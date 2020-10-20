@@ -1,0 +1,19 @@
+.toolbar {
+    padding: 10px;
+}
+
+.country {
+    --inner-padding-bottom: 6px;
+    --inner-padding-top: 6px;
+}
+
+.selected-country {
+    --background: #2ccdfa;
+    color: white;
+}
+
+.custom-flag-icon {
+    margin-right: 10px;
+    font-size: 2em;
+    border-radius: 50%;
+}

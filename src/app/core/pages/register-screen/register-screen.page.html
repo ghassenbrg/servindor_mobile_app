@@ -1,0 +1,78 @@
+<ion-content>
+  <div class="custom-box">
+    <div class="custom-slides">
+      <div class="custom-container" style="height: 100%;">
+        <div class="custom-wrapper" style="height: 100%;">
+          <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
+          <div style="width: 100vw;">
+            <div class="custom-form primary-padding" style="text-align: initial;">
+              <h2 class="no-margin">Welcome !</h2>
+              <p>Please Sign In to use Servindor services</p>
+              <div class="row primary-margin-top">
+                <div class="col no-padding">
+                  <ion-button class="facebook-btn" (click)="doFacebookRegister()">
+                    <ion-icon style=" margin-right: 10px;" name="logo-facebook"></ion-icon>
+                    Facebook
+                  </ion-button>
+                </div>
+                <div class="col no-padding">
+                  <ion-button class="google-btn" (click)="doGoogleRegister()">
+                    <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
+                    Google
+                  </ion-button>
+                </div>
+              </div>
+              <div class="row primary-margin-top">
+                <div class="col">
+                  <hr color="no-margin" color="grey">
+                </div>
+                <div class="col-auto" style="color: grey;">OR</div>
+                <div class="col">
+                  <hr color="no-margin" color="grey">
+                </div>
+              </div>
+              <form [formGroup]="registerForm">
+                <ion-item class="custom-ion-input primary-margin-top">
+                  <ion-input placeholder="First Name" formControlName="firstName" type="text">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="custom-ion-input primary-margin-top">
+                  <ion-input placeholder="Last Name" formControlName="lastName" type="text">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="custom-ion-input primary-margin-top">
+                  <ion-input placeholder="Username" formControlName="username" type="text">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="custom-ion-input primary-margin-top">
+                  <ion-input placeholder="E-mail" formControlName="mail" type="text">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="custom-ion-input  primary-margin-top">
+                  <ion-input placeholder="Password" formControlName="password"
+                    [type]="passwordVisibilty? 'text': 'password'">
+                  </ion-input>
+                  <ion-icon *ngIf="passwordVisibilty" name="eye-outline" (click)="changePasswordVisibilty()">
+                  </ion-icon>
+                  <ion-icon *ngIf="!passwordVisibilty" name="eye-off-outline" (click)="changePasswordVisibilty()">
+                  </ion-icon>
+                </ion-item>
+                <ion-item class="custom-ion-input  primary-margin-top">
+                  <ion-input placeholder="Country" formControlName="country" type="text" (ionFocus)="openModal()">
+                  </ion-input>
+                </ion-item>
+              </form>
+              <div class="primary-margin-top">
+                <ion-button type="submit" [disabled]="!registerForm.valid" (click)="doRegister()">Sign Up</ion-button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg">
+          <img src="./assets/img/undraw/bg.png" style="width: 100vw; height: 15vh;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
