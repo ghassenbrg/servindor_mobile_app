@@ -33,21 +33,19 @@
                 </div>
               </div>
               <form [formGroup]="loginForm">
-                <ion-input class="primary-margin-top" placeholder="Username" formControlName="username" type="text">
-                </ion-input>
-                <div class="row align-items-center primary-margin-top">
-                  <div class="col" style="padding-right: 0;">
-                    <ion-input ui-show-password placeholder="Password" formControlName="password"
-                      [type]="passwordVisibilty? 'text': 'password'">
-                    </ion-input>
-                  </div>
-                  <div class="col-2">
-                    <ion-button class="secondary-btn" (click)="changePasswordVisibilty()">
-                      <ion-icon *ngIf="passwordVisibilty" name="eye-outline"></ion-icon>
-                      <ion-icon *ngIf="!passwordVisibilty" name="eye-off-outline"></ion-icon>
-                    </ion-button>
-                  </div>
-                </div>
+                <ion-item class="custom-ion-input primary-margin-top">
+                  <ion-input placeholder="Username" formControlName="username" type="text">
+                  </ion-input>
+                </ion-item>
+                <ion-item class="custom-ion-input  primary-margin-top">
+                  <ion-input placeholder="Password" formControlName="password"
+                    [type]="passwordVisibilty? 'text': 'password'">
+                  </ion-input>
+                  <ion-icon *ngIf="passwordVisibilty" name="eye-outline" (click)="changePasswordVisibilty()">
+                  </ion-icon>
+                  <ion-icon *ngIf="!passwordVisibilty" name="eye-off-outline" (click)="changePasswordVisibilty()">
+                  </ion-icon>
+                </ion-item>
               </form>
               <div class="primary-margin-top">
                 <ion-button (click)="doLogin()">Login</ion-button>
