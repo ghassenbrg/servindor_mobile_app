@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 
@@ -9,8 +10,7 @@ import { AuthenticationService } from '../../services/authentication/authenticat
 })
 export class LoginScreenPage implements OnInit {
 
-  username: string;
-  password: string;
+  loginForm: FormGroup;
 
   constructor(
     public router: Router,
@@ -18,10 +18,14 @@ export class LoginScreenPage implements OnInit {
     ) { }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+  });
   }
 
   doLogin() {
-    this._authService.login(this.username, this.password);
+    this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value);
     this.router.navigate(['/']);
   }
 

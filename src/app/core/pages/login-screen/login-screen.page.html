@@ -32,12 +32,12 @@
                   <hr color="no-margin" color="grey">
                 </div>
               </div>
-              <div class="primary-margin-top">
-                <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
-              </div>
-              <div class="primary-margin-top">
-                <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
-              </div>
+              <form [formGroup]="loginForm">
+                <ion-input class="primary-margin-top" placeholder="Username" formControlName="username" type="text">
+                </ion-input>
+                <ion-input class="primary-margin-top" ui-show-password placeholder="Password" formControlName="password" type="password">
+                </ion-input>
+              </form>
               <div class="primary-margin-top">
                 <ion-button (click)="doLogin()">Login</ion-button>
               </div>
