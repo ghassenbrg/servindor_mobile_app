@@ -16,7 +16,7 @@ import { CoreModule } from './core/core.module';
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({ mode: 'md', backButtonText: '' }),
     AppRoutingModule,
     CoreModule,
     SharedModule
