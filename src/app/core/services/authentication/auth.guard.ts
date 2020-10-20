@@ -19,7 +19,6 @@ export class AuthGuard implements CanActivate {
     : Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return new Promise((resolve) => {
       this._storageApiService.getGeneralConfig().then(config => {
-        console.log(config)
         if (config && config.language) {
           if (!config.alreadyVisited) {
             this.router.navigate(['/get-started']);

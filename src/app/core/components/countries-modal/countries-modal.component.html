@@ -6,7 +6,7 @@
     </div>
     <div class="col" style="padding-left: 0;">
       <ion-item class="custom-ion-input">
-        <ion-input></ion-input>
+        <ion-input placeholder="search for a country" (ionChange)="filter($event)"></ion-input>
         <ion-icon class="primary-color" name="search-outline"></ion-icon>
       </ion-item>
     </div>
@@ -17,7 +17,7 @@
 <ion-content class="primary-padding-left primary-padding-right">
 <p *ngIf="!isLoaded" class="primary-color primary-padding-left" style="color: grey;">Loading...</p>
   <ion-list *ngIf="isLoaded">
-    <ion-item class="country" *ngFor="let country of countries;"
+    <ion-item class="country" *ngFor="let country of filteredCountries;"
       [ngClass]="selectedCountry == country.name? 'selected-country': ''" (click)='changeSelectedCountry(country.name)'>
       <i class="flag-icon-squared custom-flag-icon" [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
       <ion-label>{{country.name}}</ion-label>

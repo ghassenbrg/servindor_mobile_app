@@ -10,6 +10,7 @@ import { countries } from '../../static/countries';
 export class CountriesModalComponent implements OnInit {
 
   countries: any[] = countries;
+  filteredCountries: any[] = countries;
   public selectedCountry: string = this.navParams.get('selectedCountry');
   isLoaded: boolean;
 
@@ -23,6 +24,12 @@ export class CountriesModalComponent implements OnInit {
       this.isLoaded = true;
     }, 0);
   }
+
+  filter(event) {
+    const filterValue: string = event.detail.value ? event.detail.value : '';
+    this.filteredCountries = this.countries.filter(country => country.name.toLowerCase().startsWith(filterValue.toLowerCase()));
+  }
+
 
   changeSelectedCountry(countryName) {
     this.selectedCountry = countryName;
