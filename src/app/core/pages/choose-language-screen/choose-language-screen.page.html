@@ -24,7 +24,7 @@
           <div class="col-6" style="padding: 0;" *ngFor="let language of languages">
             <ion-card (click)="onSelectLanguage(language.value)">
               <ion-card-content style="text-align: center;"
-                [ngClass]="language.value == selectedLanguage? 'selected-language': ''">
+                [ngClass]="language.value == selectedLanguage? 'selected-language primary-bg-color': ''">
                 <i class="flag-icon-squared custom-flag-icon" [ngClass]="'flag-icon flag-icon-' + language.icon"></i>
                 <h2> {{language.label}} </h2>
               </ion-card-content>

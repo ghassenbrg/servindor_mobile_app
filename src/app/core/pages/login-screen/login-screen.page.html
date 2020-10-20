@@ -48,7 +48,7 @@
                 </ion-item>
               </form>
               <div class="primary-margin-top">
-                <ion-button (click)="doLogin()">Login</ion-button>
+                <ion-button type="submit" [disabled]="!loginForm.valid" (click)="doLogin()">Login</ion-button>
               </div>
               <div style="padding-top: 10px; text-align: center;">
                 <h5 class="no-margin" (click)="doForgotPassword()">Forgot Password ?</h5>

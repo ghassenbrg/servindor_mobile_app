@@ -26,8 +26,10 @@ export class LoginScreenPage implements OnInit {
   }
 
   doLogin() {
-    this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value);
-    this.router.navigate(['/']);
+    if (this.loginForm.valid) {
+      this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value);
+      this.router.navigate(['/']);
+    }
   }
 
   doFacebookLogin() {
