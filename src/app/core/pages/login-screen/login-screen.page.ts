@@ -20,9 +20,25 @@ export class LoginScreenPage implements OnInit {
   ngOnInit() {
   }
 
-  login() {
+  doLogin() {
     this._authService.login(this.username, this.password);
     this.router.navigate(['/']);
+  }
+
+  doFacebookLogin() {
+    console.log('Facebook Login')
+  }
+
+  doGoogleLogin() {
+    console.log('Google Login')
+  }
+
+  doRegister() {
+    this.router.navigate(['/register']);
+  }
+
+  doForgotPassword() {
+    console.log('Forgot Password')
   }
 
 }

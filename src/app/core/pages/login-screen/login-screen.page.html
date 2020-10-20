@@ -1,15 +1,60 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login Screen</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="priamry-padding">
-    <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
-    <br>
-    <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
-    <br>
-    <ion-button style="width: 100%;" (click)="login()">Login</ion-button>
+  <div class="custom-box">
+    <div class="custom-slides">
+      <div class="custom-container" style="height: 100%;">
+        <div class="custom-wrapper" style="height: 100%;">
+          <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
+          <div class="primary-margin-top" style="width: 100vw;">
+            <img src="./assets/img/undraw/login.png" style="max-width: 100%; max-height: 15vh;">
+            <div class="custom-form primary-padding" style="text-align: initial;">
+              <h2 class="no-margin">Welcome !</h2>
+              <p>Please Sign In to use Servindor services</p>
+              <div class="row primary-margin-top">
+                <div class="col no-padding">
+                  <ion-button class="facebook-btn" (click)="doFacebookLogin()">
+                    <ion-icon style=" margin-right: 10px;" name="logo-facebook"></ion-icon>
+                    Facebook
+                  </ion-button>
+                </div>
+                <div class="col no-padding">
+                  <ion-button class="google-btn" (click)="doGoogleLogin()">
+                    <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
+                    Google
+                  </ion-button>
+                </div>
+              </div>
+              <div class="row primary-margin-top">
+                <div class="col">
+                  <hr color="no-margin" color="grey">
+                </div>
+                <div class="col-auto" style="color: grey;">OR</div>
+                <div class="col">
+                  <hr color="no-margin" color="grey">
+                </div>
+              </div>
+              <div class="primary-margin-top">
+                <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+              </div>
+              <div class="primary-margin-top">
+                <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+              </div>
+              <div class="primary-margin-top">
+                <ion-button (click)="doLogin()">Login</ion-button>
+              </div>
+              <div style="padding-top: 10px; text-align: center;">
+                <h5 class="no-margin"  (click)="doForgotPassword()">Forgot Password ?</h5>
+              </div>
+              <div class="primary-margin-top">
+                <ion-button class="secondary-btn" (click)="doRegister()">No Account ? Register Now</ion-button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg">
+          <img src="./assets/img/undraw/bg.png" style="width: 100vw; height: 30vh;">
+        </div>
+      </div>
+    </div>
   </div>
+
 </ion-content>
