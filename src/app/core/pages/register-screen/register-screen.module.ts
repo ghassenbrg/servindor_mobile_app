@@ -14,8 +14,8 @@ import { CoreModule } from '../../core.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    CoreModule,
     IonicModule,
+    CoreModule,
     RegisterScreenPageRoutingModule
   ],
   declarations: [RegisterScreenPage]

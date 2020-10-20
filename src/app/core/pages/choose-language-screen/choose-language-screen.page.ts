@@ -15,10 +15,10 @@ export class ChooseLanguageScreenPage implements OnInit {
   generalConfig: GeneralConfig;
 
   languages = [
-    { value: 'en', label: 'English', icon:'gb' },
-    { value: 'fr', label: 'Français', icon:'fr' },
-    { value: 'ar', label: 'عربيّة', icon:'sa' },
-    { value: 'tn', label: 'Tounsi', icon:'tn' }
+    { value: 'en', label: 'English', icon: 'gb' },
+    { value: 'fr', label: 'Français', icon: 'fr' },
+    { value: 'ar', label: 'عربيّة', icon: 'sa' },
+    { value: 'tn', label: 'Tounsi', icon: 'tn' }
   ];
   selectedLanguage: string = 'en';
   next: string;
@@ -27,13 +27,16 @@ export class ChooseLanguageScreenPage implements OnInit {
     public router: Router,
     private _storageApiService: StorageApiService,
     private translate: TranslateService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.translate.setDefaultLang('en');
     this._storageApiService.getGeneralConfig().then(config => {
       if (config) {
         this.generalConfig = config;
+        if (config.language) {
+          this.translate.use(config.language);
+        }
       } else {
         this.generalConfig = new GeneralConfig;
       }

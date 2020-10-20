@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 // import { SplashScreen as NativeSplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Plugins } from '@capacitor/core';
+import { TranslateService } from '@ngx-translate/core';
+import { StorageApiService } from './core/services/Storage/storage-api.service';
 const { SplashScreen } = Plugins;
 
 @Component({
@@ -15,12 +17,14 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     //private nativeSplashScreen: NativeSplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private translate: TranslateService,
+    private _storageApiService: StorageApiService
   ) {
     this.initializeApp();
   }
 
-  
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -28,5 +32,11 @@ export class AppComponent {
       //this.nativeSplashScreen.hide();
       SplashScreen.hide();
     });
+    this.translate.setDefaultLang('en');
+    this._storageApiService.getGeneralConfig().then(config => {
+      if (config.language) {
+        this.translate.use(config.language);
+      }
+    })
   }
 }
