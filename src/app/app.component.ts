@@ -34,7 +34,7 @@ export class AppComponent {
     });
     this.translate.setDefaultLang('en');
     this._storageApiService.getGeneralConfig().then(config => {
-      if (config.language) {
+      if (config && config.language) {
         this.translate.use(config.language);
       }
     })
