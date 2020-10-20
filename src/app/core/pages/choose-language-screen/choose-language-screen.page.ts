@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GeneralConfig } from '../../models/generalConfig.model';
 import { StorageApiService } from '../../services/Storage/storage-api.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-choose-language-screen',
@@ -9,23 +10,27 @@ import { StorageApiService } from '../../services/Storage/storage-api.service';
   styleUrls: ['./choose-language-screen.page.scss'],
 })
 export class ChooseLanguageScreenPage implements OnInit {
+  public language: string;
 
   generalConfig: GeneralConfig;
 
   languages = [
-    { value: 'EN', label: 'English', icon:'gb' },
-    { value: 'FR', label: 'Français', icon:'fr' },
-    { value: 'AR', label: 'عربيّة', icon:'sa' },
-    { value: 'TN', label: 'Tounsi', icon:'tn' }
+    { value: 'en', label: 'English', icon:'gb' },
+    { value: 'fr', label: 'Français', icon:'fr' },
+    { value: 'ar', label: 'عربيّة', icon:'sa' },
+    { value: 'tn', label: 'Tounsi', icon:'tn' }
   ];
-  selectedLanguage: string = 'EN';
+  selectedLanguage: string = 'en';
+  next: string;
 
   constructor(
     public router: Router,
-    private _storageApiService: StorageApiService
+    private _storageApiService: StorageApiService,
+    private translate: TranslateService
     ) { }
 
   ngOnInit() {
+    this.translate.setDefaultLang('en');
     this._storageApiService.getGeneralConfig().then(config => {
       if (config) {
         this.generalConfig = config;
@@ -37,6 +42,7 @@ export class ChooseLanguageScreenPage implements OnInit {
 
   onSelectLanguage(value) {
     this.selectedLanguage = value;
+    this.translate.use(this.selectedLanguage);
   }
 
   doConfirm() {
@@ -45,5 +51,6 @@ export class ChooseLanguageScreenPage implements OnInit {
       this.router.navigate(['/']);
     });
   }
+
 
 }

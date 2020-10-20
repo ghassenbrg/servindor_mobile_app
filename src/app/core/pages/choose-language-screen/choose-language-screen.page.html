@@ -17,8 +17,8 @@
     <div class="custom-body">
       <div class="primary-padding-left primary-padding-right primary-padding-bottom">
         <div class="text">
-          <h2>Welcome </h2>
-          <p>Please choose your preferred display language.</p>
+          <h2 [translate]="'Welcome'"></h2>
+          <p [translate]="'Chose_lang_msg'"></p>
         </div>
         <div class="row">
           <div class="col-6" style="padding: 0;" *ngFor="let language of languages">
@@ -32,7 +32,7 @@
           </div>
         </div>
         <br>
-        <ion-button expand="block" (click)="doConfirm()">Confirm</ion-button>
+        <ion-button expand="block" (click)="doConfirm()" [translate]="'Next'"></ion-button>
       </div>
     </div>
   </div>

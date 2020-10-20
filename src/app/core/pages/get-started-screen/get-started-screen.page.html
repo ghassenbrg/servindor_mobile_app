@@ -9,18 +9,18 @@
             <ion-slides [options]="slideOpts" (ionSlidePrevStart)="slideDidChange()"
               (ionSlideNextStart)="slideDidChange()" #slides>
               <ion-slide>
-                <app-step title="Find Your Needed Service"
-                  description="Find your needed service from our existing location easily"
+                <app-step [title]="'Find Your Needed Service' | translate"
+                  [description]="'Find your needed service from our existing location easily' | translate"
                   imgUrl="./assets/img/get-started/step0.png"></app-step>
               </ion-slide>
               <ion-slide>
-                <app-step title="Find Your Needed Service"
-                  description="Find your needed service from our existing location easily"
+                <app-step [title]="'Find Your Needed Service' | translate"
+                [description]="'Find your needed service from our existing location easily' | translate"
                   imgUrl="./assets/img/get-started/step1.png"></app-step>
               </ion-slide>
               <ion-slide>
-                <app-step title="Find Your Needed Service"
-                  description="Find your needed service from our existing location easily"
+                <app-step [title]="'Find Your Needed Service' | translate"
+                [description]="'Find your needed service from our existing location easily' | translate"
                   imgUrl="./assets/img/get-started/step2.png"></app-step>
               </ion-slide>
             </ion-slides>
