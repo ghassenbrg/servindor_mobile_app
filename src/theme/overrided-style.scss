@@ -1,0 +1,26 @@
+ion-input {
+    border: solid 1px #D9D9D9;
+    background-color: white;
+    border-radius: 10px;
+    height: 47px;
+}
+
+ion-select {
+    border: solid 1px #D9D9D9;
+    background-color: white;
+    border-radius: 10px;
+    height: 27px;
+    padding-right: 10px;
+}
+
+ion-button {
+    --box-shadow: none;
+    --border-radius: 10px;
+    height: 47px;
+}
+
+ion-card {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
