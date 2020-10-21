@@ -18,7 +18,7 @@ export class ChooseLanguageScreenPage implements OnInit {
     { value: 'en', label: 'English', icon: 'gb' },
     { value: 'fr', label: 'Français', icon: 'fr' },
     { value: 'ar', label: 'عربيّة', icon: 'sa' },
-    { value: 'tn', label: 'Tounsi', icon: 'tn' }
+    { value: 'tn', label: 'تونسي', icon: 'tn' }
   ];
   selectedLanguage: string = 'en';
   next: string;

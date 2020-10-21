@@ -1,7 +1,27 @@
 {
     "Next": "التالى",
+    "Get Started": "انطلق",
     "Welcome": "أهلا بك",
     "Chose_lang_msg": "الرجاء اختيار لغة العرض المفضلة لديك.",
     "Find Your Needed Service": "البحث عن خدمتك المطلوبة",
-    "Find your needed service from our existing location easily" : "اعثر على الخدمة المطلوبة من موقعك الحالي بسهولة"
+    "Find your needed service from our existing location easily" : "اعثر على الخدمة المطلوبة من موقعك الحالي بسهولة",
+    "Please Sign In to use Servindor services": "الرجاء تسجيل الدخول لاستخدام خدمات Servindor",
+    "Facebook": "فايسبوك",
+    "Google": "جوجل",
+    "OR": "أو",
+    "Username or Password is incorrect": "اسم المستخدم أو كلمة المرور غير صحيحة",
+    "Username": "إسم المستخدم",
+    "Password": "كلمة المرور",
+    "Login": "دخول",
+    "Forgot Password ?": " نسيت  كلمة المرور ؟",
+    "No Account ? Register Now": "لا تملك حساب ؟ سجل الان",
+    "Please Sign Up to use Servindor services": "يرجى التسجيل لاستخدام خدمات Servindor",
+    "Username already exist": "اسم المستخدم موجود بالفعل",
+    "First Name": "الاسم",
+    "Last Name": "اللّقب",
+    "E-mail": "البريد الإلكتروني",
+    "Country": "البلد",
+    "Sign Up": "تسجيل",
+    "search for a country": "البحث عن بلد"
+ 
 }

@@ -40,11 +40,11 @@
             <i class="fas fa-circle dot dot-margin" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
           </div>
           <div class="col">
-            <ion-button expand="block" (click)="slides.slideNext()">Next</ion-button>
+            <ion-button expand="block" (click)="slides.slideNext()"  [translate]="'Next'"></ion-button>
           </div>
         </div>
         <ion-button expand="block" *ngIf="slidesLength == currentSlideIndex + 1"
-          (click)="doGetStarted()">Get Started</ion-button>
+          (click)="doGetStarted()" [translate]="'Get Started'">Get Started</ion-button>
       </div>
     </div>
   </div>

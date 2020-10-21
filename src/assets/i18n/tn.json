@@ -1,7 +1,27 @@
 {
     "Next": "بعدو",
+    "Get Started": "ركّح جوّك",
     "Welcome": "أهلا بيك",
     "Chose_lang_msg": "إختار اللغة إلي تساعدك.",
     "Find Your Needed Service": "ألقى الخدمة إلي حاشتك بها",
-    "Find your needed service from our existing location easily" : "ألقى الخدمة إلي حاشتك بها من غير متتحرك"
+    "Find your needed service from our existing location easily" : "ألقى الخدمة إلي حاشتك بها من غير متتحرك",
+    "Please Sign In to use Servindor services": "لازمك تكونكتي بش تنجم تستعمل الخدمات متع Servindor",
+    "Facebook": "فايسبوك",
+    "Google": "جوجل",
+    "OR": "ولاّ",
+    "Username or Password is incorrect": "الإسم ولاّ المودوباس غالط",
+    "Username": "إسم المستخدم",
+    "Password": "المودوباس",
+    "Login": "كونكتي",
+    "Forgot Password ?": "نسيت المودوباس ؟",
+    "No Account ? Register Now": "ماعندكش كونت ؟ قيّد توّا",
+    "Please Sign Up to use Servindor services": "لازمك تسجّل بش تنجم تستعمل الخدمات متع Servindor",
+    "Username already exist": "إسم المستخدم إلّي إخترتو ديجا موجود",
+    "First Name": "الاسم",
+    "Last Name": "اللّقب",
+    "E-mail": "الايمايل",
+    "Country": "البلاد",
+    "Sign Up": "سجّل",
+    "search for a country": "لوّج على بلاد"
+ 
 }

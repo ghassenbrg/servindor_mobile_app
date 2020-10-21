@@ -6,19 +6,19 @@
           <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
           <div style="width: 100vw;">
             <div class="custom-form primary-padding" style="text-align: initial;">
-              <h2 class="no-margin">Welcome !</h2>
-              <p>Please Sign In to use Servindor services</p>
+              <h2 class="no-margin">{{'Welcome' | translate}}</h2>
+              <p>{{'Please Sign Up to use Servindor services' | translate}}</p>
               <div class="row primary-margin-top">
                 <div class="col no-padding">
                   <ion-button class="facebook-btn" (click)="doFacebookRegister()">
                     <ion-icon style=" margin-right: 10px;" name="logo-facebook"></ion-icon>
-                    Facebook
+                    {{'Facebook' | translate}}
                   </ion-button>
                 </div>
                 <div class="col no-padding">
                   <ion-button class="google-btn" (click)="doGoogleRegister()">
                     <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
-                    Google
+                    {{'Google' | translate}}
                   </ion-button>
                 </div>
               </div>
@@ -26,31 +26,31 @@
                 <div class="col">
                   <hr color="no-margin" color="grey">
                 </div>
-                <div class="col-auto" style="color: grey;">OR</div>
+                <div class="col-auto" style="color: grey;">{{'OR' | translate}}</div>
                 <div class="col">
                   <hr color="no-margin" color="grey">
                 </div>
               </div>
               <form [formGroup]="registerForm">
-                <ion-label *ngIf="!isError" color="danger" floating> *Username already exist </ion-label>
+                <ion-label *ngIf="isError" color="danger" floating> * {{'Username already exist' | translate}} </ion-label>
                 <ion-item class="custom-ion-input primary-margin-top">
-                  <ion-input placeholder="First Name" formControlName="firstName" type="text">
+                  <ion-input placeholder="{{'First Name' | translate}}" formControlName="firstName" type="text">
                   </ion-input>
                 </ion-item>
                 <ion-item class="custom-ion-input primary-margin-top">
-                  <ion-input placeholder="Last Name" formControlName="lastName" type="text">
+                  <ion-input placeholder="{{'Last Name' | translate}}" formControlName="lastName" type="text">
                   </ion-input>
                 </ion-item>
                 <ion-item class="custom-ion-input primary-margin-top">
-                  <ion-input placeholder="Username" formControlName="username" type="text">
+                  <ion-input placeholder="{{'Username' | translate}}" formControlName="username" type="text">
                   </ion-input>
                 </ion-item>
                 <ion-item class="custom-ion-input primary-margin-top">
-                  <ion-input placeholder="E-mail" formControlName="mail" type="text">
+                  <ion-input placeholder="{{'E-mail' | translate}}" formControlName="mail" type="text">
                   </ion-input>
                 </ion-item>
                 <ion-item class="custom-ion-input  primary-margin-top">
-                  <ion-input placeholder="Password" formControlName="password"
+                  <ion-input placeholder="{{'Password' | translate}}" formControlName="password"
                     [type]="passwordVisibilty? 'text': 'password'">
                   </ion-input>
                   <ion-icon *ngIf="passwordVisibilty" name="eye-outline" (click)="changePasswordVisibilty()">
@@ -59,12 +59,12 @@
                   </ion-icon>
                 </ion-item>
                 <ion-item class="custom-ion-input  primary-margin-top">
-                  <ion-input placeholder="Country" formControlName="country" type="text" (ionFocus)="openModal()">
+                  <ion-input placeholder="{{'Country' | translate}}" formControlName="country" type="text" (ionFocus)="openModal()">
                   </ion-input>
                 </ion-item>
               </form>
               <div class="primary-margin-top">
-                <ion-button type="submit" [disabled]="!registerForm.valid" (click)="doRegister()">Sign Up</ion-button>
+                <ion-button type="submit" [disabled]="!registerForm.valid" (click)="doRegister()">{{'Sign Up' | translate}}</ion-button>
               </div>
             </div>
           </div>

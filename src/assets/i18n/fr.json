@@ -1,7 +1,27 @@
 {
     "Next": "Suivant",
+    "Get Started": "Commencer",
     "Welcome": "Bienvenue",
     "Chose_lang_msg": "Veuillez choisir votre langue d'affichage préférée.",
     "Find Your Needed Service": "Trouvez le service dont vous avez besoin",
-    "Find your needed service from our existing location easily" : "Trouvez facilement le service dont vous avez besoin à partir de votre emplacement actuel"
+    "Find your needed service from our existing location easily" : "Trouvez facilement le service dont vous avez besoin à partir de votre emplacement actuel",
+    "Please Sign In to use Servindor services": "Veuillez vous connecter pour utiliser les services Servindor",
+    "Facebook": "Facebook",
+    "Google": "Google",
+    "OR": "OU",
+    "Username or Password is incorrect": "L'identifiant ou le mot de passe est incorrect",
+    "Username": "Nom d'utilisateur",
+    "Password": "Mot de passe",
+    "Login": "Connexion",
+    "Forgot Password ?": "Mot de passe oublié ?",
+    "No Account ? Register Now": "Pas de compte ? S'inscrire maintenant",
+    "Please Sign Up to use Servindor services": "Veuillez vous inscrire pour utiliser les services Servindor",
+    "Username already exist": "Le nom d'utilisateur existe déjà",
+    "First Name": "Prénom",
+    "Last Name": "Nom",
+    "E-mail": "E-mail",
+    "Country": "Pays",
+    "Sign Up": "Inscription",
+    "search for a country": "rechercher un pays"
+ 
 }

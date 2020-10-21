@@ -7,19 +7,19 @@
           <div class="primary-margin-top" style="width: 100vw;">
             <img src="./assets/img/undraw/login.png" style="max-width: 100%; max-height: 15vh;">
             <div class="custom-form primary-padding" style="text-align: initial;">
-              <h2 class="no-margin">Welcome !</h2>
-              <p>Please Sign In to use Servindor services</p>
+              <h2 class="no-margin">{{'Welcome' | translate}}</h2>
+              <p>{{'Please Sign In to use Servindor services' | translate}}</p>
               <div class="row primary-margin-top">
                 <div class="col no-padding">
                   <ion-button class="facebook-btn" (click)="doFacebookLogin()">
                     <ion-icon style=" margin-right: 10px;" name="logo-facebook"></ion-icon>
-                    Facebook
+                    {{'Facebook' | translate}}
                   </ion-button>
                 </div>
                 <div class="col no-padding">
                   <ion-button class="google-btn" (click)="doGoogleLogin()">
                     <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
-                    Google
+                    {{'Google' | translate}}
                   </ion-button>
                 </div>
               </div>
@@ -27,19 +27,19 @@
                 <div class="col">
                   <hr color="no-margin" color="grey">
                 </div>
-                <div class="col-auto" style="color: grey;">OR</div>
+                <div class="col-auto" style="color: grey;">{{'OR' | translate}}</div>
                 <div class="col">
                   <hr color="no-margin" color="grey">
                 </div>
               </div>
               <form [formGroup]="loginForm">
-                <ion-label *ngIf="isError" color="danger" floating> *Username or Password  is incorrect </ion-label>
+                <ion-label *ngIf="isError" color="danger"> * {{'Username or Password is incorrect' | translate}} </ion-label>
                 <ion-item class="custom-ion-input primary-margin-top">
-                  <ion-input placeholder="Username" formControlName="username" type="text">
+                  <ion-input placeholder="{{'Username' | translate}}" formControlName="username" type="text">
                   </ion-input>
                 </ion-item>
                 <ion-item class="custom-ion-input  primary-margin-top">
-                  <ion-input placeholder="Password" formControlName="password"
+                  <ion-input placeholder="{{'Password' | translate}}" formControlName="password"
                     [type]="passwordVisibilty? 'text': 'password'">
                   </ion-input>
                   <ion-icon *ngIf="passwordVisibilty" name="eye-outline" (click)="changePasswordVisibilty()">
@@ -49,13 +49,13 @@
                 </ion-item>
               </form>
               <div class="primary-margin-top">
-                <ion-button type="submit" [disabled]="!loginForm.valid" (click)="doLogin()">Login</ion-button>
+                <ion-button type="submit" [disabled]="!loginForm.valid" (click)="doLogin()">{{'Login' | translate}}</ion-button>
               </div>
               <div style="padding-top: 10px; text-align: center;">
-                <h5 class="no-margin" (click)="doForgotPassword()">Forgot Password ?</h5>
+                <h5 class="no-margin" (click)="doForgotPassword()">{{'Forgot Password ?' | translate}}</h5>
               </div>
               <div class="primary-margin-top">
-                <ion-button class="secondary-btn" (click)="doRegister()">No Account ? Register Now</ion-button>
+                <ion-button class="secondary-btn" (click)="doRegister()">{{'No Account ? Register Now' | translate}}</ion-button>
               </div>
             </div>
           </div>
