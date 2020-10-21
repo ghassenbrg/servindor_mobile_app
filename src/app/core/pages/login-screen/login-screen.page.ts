@@ -12,6 +12,7 @@ export class LoginScreenPage implements OnInit {
 
   loginForm: FormGroup;
   passwordVisibilty: boolean = false;
+  isError: boolean;
 
   constructor(
     public router: Router,
@@ -27,8 +28,13 @@ export class LoginScreenPage implements OnInit {
 
   doLogin() {
     if (this.loginForm.valid) {
-      this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value);
-      this.router.navigate(['/']);
+      let authRes = this._authService.login(this.loginForm.get('username').value, this.loginForm.get('password').value);
+      if (authRes) {
+        this.isError = false;
+        this.router.navigate(['/']);
+      } else {
+        this.isError = true;
+      }
     }
   }
 

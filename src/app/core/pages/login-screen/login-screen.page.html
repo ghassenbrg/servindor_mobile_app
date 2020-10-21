@@ -33,6 +33,7 @@
                 </div>
               </div>
               <form [formGroup]="loginForm">
+                <ion-label *ngIf="isError" color="danger" floating> *Username or Password  is incorrect </ion-label>
                 <ion-item class="custom-ion-input primary-margin-top">
                   <ion-input placeholder="Username" formControlName="username" type="text">
                   </ion-input>

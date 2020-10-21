@@ -32,6 +32,7 @@
                 </div>
               </div>
               <form [formGroup]="registerForm">
+                <ion-label *ngIf="!isError" color="danger" floating> *Username already exist </ion-label>
                 <ion-item class="custom-ion-input primary-margin-top">
                   <ion-input placeholder="First Name" formControlName="firstName" type="text">
                   </ion-input>

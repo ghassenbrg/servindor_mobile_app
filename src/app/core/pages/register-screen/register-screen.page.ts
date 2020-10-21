@@ -15,7 +15,8 @@ export class RegisterScreenPage implements OnInit {
 
   registerForm: FormGroup;
   passwordVisibilty: boolean = false;
-
+  isError: boolean;
+  
   constructor(
     public router: Router,
     private _authService: AuthenticationService,
