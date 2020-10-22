@@ -36,26 +36,45 @@ export class VerifyOtpScreenPage implements OnInit {
     });
   }
   keypressedCodeDig(event, inputIndex: number) {
-    this.digBackUp[inputIndex - 1] = event && event.detail? event.detail.data: null;
+    this.digBackUp[inputIndex - 1] = event && event.detail ? event.detail.data : null;
   }
 
   changeCodeDig(event, inputIndex: number) {
     this.codeForm.get('dig_' + inputIndex).setValue(this.digBackUp[inputIndex - 1]);
-    switch (inputIndex) {
-      case 1:
-        this.input_dig_2.setFocus();
-        break;
-      case 2:
-        this.input_dig_3.setFocus();
-        break;
-      case 3:
-        this.input_dig_4.setFocus();
-        break;
-      case 4:
-        this.input_dig_5.setFocus();
-        break;
-      default:
-        break;
+    if (this.digBackUp[inputIndex - 1]) {
+      switch (inputIndex) {
+        case 1:
+          this.input_dig_2.setFocus();
+          break;
+        case 2:
+          this.input_dig_3.setFocus();
+          break;
+        case 3:
+          this.input_dig_4.setFocus();
+          break;
+        case 4:
+          this.input_dig_5.setFocus();
+          break;
+        default:
+          break;
+      }
+    } else {
+      switch (inputIndex) {
+        case 2:
+          this.input_dig_1.setFocus();
+          break;
+        case 3:
+          this.input_dig_2.setFocus();
+          break;
+        case 4:
+          this.input_dig_3.setFocus();
+          break;
+        case 5:
+          this.input_dig_4.setFocus();
+          break;
+        default:
+          break;
+      }
     }
   }
 
