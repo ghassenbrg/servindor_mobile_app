@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { GeneralConfig } from '../../models/generalConfig.model';
 import { StorageApiService } from '../../services/Storage/storage-api.service';
 import { TranslateService } from '@ngx-translate/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-choose-language-screen',
@@ -15,18 +16,19 @@ export class ChooseLanguageScreenPage implements OnInit {
   generalConfig: GeneralConfig;
 
   languages = [
-    { value: 'en', label: 'English', icon: 'gb' },
-    { value: 'fr', label: 'Français', icon: 'fr' },
-    { value: 'ar', label: 'عربيّة', icon: 'sa' },
-    { value: 'tn', label: 'تونسي', icon: 'tn' }
+    { value: 'en', label: 'English', icon: 'gb', direction: 'ltr' },
+    { value: 'fr', label: 'Français', icon: 'fr', direction: 'ltr' },
+    { value: 'ar', label: 'عربيّة', icon: 'sa', direction: 'rtl' },
+    { value: 'tn', label: 'تونسي', icon: 'tn', direction: 'rtl' }
   ];
-  selectedLanguage: string = 'en';
+  selectedLanguage: any = { value: 'en', label: 'English', icon: 'gb', direction: 'ltr' };
   next: string;
 
   constructor(
     public router: Router,
     private _storageApiService: StorageApiService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private appComponent: AppComponent
   ) { }
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class ChooseLanguageScreenPage implements OnInit {
         this.generalConfig = config;
         if (config.language) {
           this.translate.use(config.language);
+          this.appComponent.direction = config.direction;
         }
       } else {
         this.generalConfig = new GeneralConfig;
@@ -43,13 +46,15 @@ export class ChooseLanguageScreenPage implements OnInit {
     })
   }
 
-  onSelectLanguage(value) {
-    this.selectedLanguage = value;
-    this.translate.use(this.selectedLanguage);
+  onSelectLanguage(language) {
+    this.selectedLanguage = language;
+    this.translate.use(this.selectedLanguage.value);
   }
 
   doConfirm() {
-    this.generalConfig.language = this.selectedLanguage;
+    this.generalConfig.language = this.selectedLanguage.value;
+    this.generalConfig.direction = this.selectedLanguage.direction;
+    this.appComponent.direction = this.selectedLanguage.direction;
     this._storageApiService.setGeneralConfig(this.generalConfig).then(res => {
       this.router.navigate(['/']);
     });

@@ -36,7 +36,7 @@ export class VerifyOtpScreenPage implements OnInit {
     });
   }
   keypressedCodeDig(event, inputIndex: number) {
-    this.digBackUp[inputIndex - 1] = event && event.detail ? event.detail.data : null;
+    this.digBackUp[inputIndex - 1] = event && event.detail ? event.detail.data : event.detail;
   }
 
   changeCodeDig(event, inputIndex: number) {

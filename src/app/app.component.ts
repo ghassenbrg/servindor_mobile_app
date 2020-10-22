@@ -14,6 +14,8 @@ const { SplashScreen } = Plugins;
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  direction: string = 'ltr';
+
   constructor(
     private platform: Platform,
     //private nativeSplashScreen: NativeSplashScreen,
@@ -36,6 +38,7 @@ export class AppComponent {
     this._storageApiService.getGeneralConfig().then(config => {
       if (config && config.language) {
         this.translate.use(config.language);
+        this.direction = config.direction;
       }
     })
   }
