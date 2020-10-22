@@ -5,6 +5,13 @@
     height: 47px;
 }
 
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 ion-select {
     border: solid 1px #D9D9D9;
     background-color: white;

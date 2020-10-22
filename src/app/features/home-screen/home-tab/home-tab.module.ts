@@ -8,6 +8,7 @@ import { HomeTabPageRoutingModule } from './home-tab-routing.module';
 
 import { HomeTabPage } from './home-tab.page';
 import { ExploreContainerComponentModule } from 'src/app/explore-container/explore-container.module';
+import { HomeHeaderComponent } from './components/home-header/home-header.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ExploreContainerComponentModule } from 'src/app/explore-container/explo
     IonicModule,
     HomeTabPageRoutingModule
   ],
-  declarations: [HomeTabPage]
+  declarations: [HomeTabPage, HomeHeaderComponent]
 })
 export class HomeTabPageModule {}
