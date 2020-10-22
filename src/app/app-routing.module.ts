@@ -23,6 +23,14 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./core/pages/register-screen/register-screen.module').then( m => m.RegisterScreenPageModule)
+  },
+  {
+    path: 'verify-phone',
+    loadChildren: () => import('./core/pages/verify-phone-number-screen/verify-phone-number-screen.module').then( m => m.VerifyPhoneNumberScreenPageModule)
+  },
+  {
+    path: 'verify-otp',
+    loadChildren: () => import('./core/pages/verify-otp-screen/verify-otp-screen.module').then( m => m.VerifyOtpScreenPageModule)
   }
 ];
 @NgModule({

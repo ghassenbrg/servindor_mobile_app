@@ -1,0 +1,73 @@
+<ion-content>
+  <div class="custom-box">
+    <div class="custom-slides">
+      <div class="custom-container" style="height: 100%;">
+        <div class="custom-wrapper" style="height: 100%;">
+          <img src="./assets/img/logo.png" style="width: 50vw; padding: 20px;">
+          <div class="primary-margin-top" style="width: 100vw;">
+            <img src="./assets/img/undraw/verify-otp.png" style="max-width: 100%; max-height: 15vh;">
+            <div class="custom-form primary-padding" style="text-align: initial;">
+              <h2 class="no-margin">{{'Verification Code OTP' | translate}}</h2>
+              <p style="margin-bottom: 2px;">{{'A verification code has been sent to' | translate}}</p>
+              <p style="font-weight: bold; margin: 0;">({{countryPhoneCode}}) {{phoneNumber}}</p>
+              <form [formGroup]="codeForm">
+                <div class="row primary-margin-top">
+                  <div class="col custom-margin-right dig-1">
+                    <ion-item style="text-align: center;" class="custom-ion-input">
+                      <ion-input #input_dig_1 placeholder="0" formControlName="dig_1" type="number"
+                        (ionChange)="changeCodeDig($event, 1)" (ionInput)="keypressedCodeDig($event, 1)">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+                  <div class="col custom-margin-right dig-2">
+                    <ion-item style="text-align: center;" class="custom-ion-input">
+                      <ion-input #input_dig_2 placeholder="0" formControlName="dig_2" type="number"
+                        (ionChange)="changeCodeDig($event, 2)" (ionInput)="keypressedCodeDig($event, 2)">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+                  <div class="col custom-margin-right dig-3">
+                    <ion-item style="text-align: center;" class="custom-ion-input">
+                      <ion-input #input_dig_3 placeholder="0" formControlName="dig_3" type="number"
+                        (ionChange)="changeCodeDig($event, 3)" (ionInput)="keypressedCodeDig($event, 3)">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+                  <div class="col custom-margin-right dig-4">
+                    <ion-item style="text-align: center;" class="custom-ion-input">
+                      <ion-input #input_dig_4 placeholder="0" formControlName="dig_4" type="number"
+                        (ionChange)="changeCodeDig($event, 4)" (ionInput)="keypressedCodeDig($event, 4)">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+                  <div class="col dig-5">
+                    <ion-item style="text-align: center;" class="custom-ion-input">
+                      <ion-input #input_dig_5 placeholder="0" formControlName="dig_5" type="number"
+                        (ionChange)="changeCodeDig($event, 5)" (ionInput)="keypressedCodeDig($event, 5)">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+                </div>
+              </form>
+              <div class="primary-margin-top">
+                <ion-button type="submit" [disabled]="!codeForm.valid" (click)="doConfirm()">
+                  {{'Submit' | translate}}
+                </ion-button>
+              </div>
+              <div style="padding-top: 10px; text-align: center;">
+                <p class="no-margin" (click)="doResend()">
+                  {{"Didn't receive the code ?" | translate}}
+                  <b>{{'Resend' | translate}} (39s)</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg">
+          <img src="./assets/img/undraw/bg.png" style="width: 100vw; height: 30vh;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

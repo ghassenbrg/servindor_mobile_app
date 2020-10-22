@@ -22,6 +22,16 @@
     "E-mail": "البريد الإلكتروني",
     "Country": "البلد",
     "Sign Up": "تسجيل",
-    "search for a country": "البحث عن بلد"
+    "search for a country": "البحث عن بلد",
+    "Verify Your Number": "تأكيد رقم الهاتف",
+    "Please enter your mobile number to receive a verification code": "الرجاء إدخال رقم هاتفك المحمول لتلقي رمز التحقق التأكيد",
+    "Prefix": "البادئة",
+    "Phone Number": "رقم الهاتف",
+    "Send Code": "إرسال الرمز",
+    "Verification Code OTP": "تأكيد رمز OTP",
+    "A verification code has been sent to": "تم إرسال رمز التحقق إلى",
+    "Submit": "إرسال",
+    "Didn't receive the code ?": "لم يصلك الرمز ؟",
+    "Resend": "إعادة إرسال"
  
 }

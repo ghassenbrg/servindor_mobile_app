@@ -22,6 +22,16 @@
     "E-mail": "الايمايل",
     "Country": "البلاد",
     "Sign Up": "سجّل",
-    "search for a country": "لوّج على بلاد"
+    "search for a country": "لوّج على بلاد",
+    "Verify Your Number": "نثبتو في نومرو تليفونك",
+    "Please enter your mobile number to receive a verification code": "إكتب الكود إلي جاك في ميساج علتلفون",
+    "Prefix": "ملوّل",
+    "Phone Number": "نومرو التليفون",
+    "Send Code": "ابعث الكود",
+    "Verification Code OTP": "الكود بش نثبتو",
+    "A verification code has been sent to": "الكود بعثناه النومرو هذا",
+    "Submit": "ابعث",
+    "Didn't receive the code ?": "موصلكش الكود ؟",
+    "Resend": "عاود ابعث"
  
 }

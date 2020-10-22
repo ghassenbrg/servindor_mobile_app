@@ -18,7 +18,7 @@
 <p *ngIf="!isLoaded" class="primary-color primary-padding-left" style="color: grey;">Loading...</p>
   <ion-list *ngIf="isLoaded">
     <ion-item class="country" *ngFor="let country of filteredCountries;"
-      [ngClass]="selectedCountry == country.name? 'selected-country': ''" (click)='changeSelectedCountry(country.name)'>
+      [ngClass]="selectedCountry && selectedCountry.name == country.name? 'selected-country': ''" (click)='changeSelectedCountry(country)'>
       <i class="flag-icon-squared custom-flag-icon" [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
       <ion-label>{{country.name}}</ion-label>
     </ion-item>

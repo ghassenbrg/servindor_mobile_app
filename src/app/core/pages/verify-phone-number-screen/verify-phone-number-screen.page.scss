@@ -1,0 +1,73 @@
+.custom-container {
+    position: relative;
+    width: 100vw;
+}
+
+.custom-wrapper {
+    background-color: transparent;
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+}
+
+.bg {
+    top: 0;
+    left: 0;
+}
+
+.custom-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 20px;
+}
+
+.active-dot {
+    color: #2ccdfa;
+}
+
+.inactive-dot {
+    color: #E1E1E1;
+}
+
+.dot-margin {
+    margin-left: 5px;
+}
+
+.dot {
+    font-size: 0.7em;
+}
+
+.content {
+    padding: 20px;
+}
+
+.selected-language {
+    background-color: #2ccdfa;
+    color: white;
+}
+
+.custom-box {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.custom-box .custom-header {
+    flex: 0 1 auto;
+
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+
+.custom-box .custom-body {
+    flex: 1 1 auto;
+}
+
+/* display flags in dropdown */
+.custom-flag-icon {
+    font-size: 1.5em;
+    border-radius: 50%;
+}

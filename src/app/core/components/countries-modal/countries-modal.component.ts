@@ -11,7 +11,7 @@ export class CountriesModalComponent implements OnInit {
 
   countries: any[] = countries;
   filteredCountries: any[] = countries;
-  public selectedCountry: string = this.navParams.get('selectedCountry');
+  public selectedCountry: any = this.navParams.get('selectedCountry');
   isLoaded: boolean;
 
   constructor(
@@ -31,8 +31,8 @@ export class CountriesModalComponent implements OnInit {
   }
 
 
-  changeSelectedCountry(countryName) {
-    this.selectedCountry = countryName;
+  changeSelectedCountry(country) {
+    this.selectedCountry = country;
     this.closeModal();
   }
 

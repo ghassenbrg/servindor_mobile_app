@@ -22,6 +22,16 @@
     "E-mail": "E-mail",
     "Country": "Country",
     "Sign Up": "Sign Up",
-    "search for a country": "search for a country"
-    
+    "search for a country": "search for a country",
+    "Verify Your Number": "Verify Your Number",
+    "Please enter your mobile number to receive a verification code": "Please enter your mobile number to receive a verification code",
+    "Prefix": "Prefix",
+    "Phone Number": "Phone Number",
+    "Send Code": "Send Code",
+    "Verification Code OTP": "Verification Code OTP",
+    "A verification code has been sent to": "A verification code has been sent to",
+    "Submit": "Submit",
+    "Didn't receive the code ?": "Didn't receive the code ?",
+    "Resend": "Resend"
+ 
 }

@@ -22,6 +22,16 @@
     "E-mail": "E-mail",
     "Country": "Pays",
     "Sign Up": "Inscription",
-    "search for a country": "rechercher un pays"
+    "search for a country": "rechercher un pays",
+    "Verify Your Number": "Vérifiez votre numéro",
+    "Please enter your mobile number to receive a verification code": "Veuillez saisir votre numéro de téléphone portable pour recevoir un code de vérification",
+    "Prefix": "Préfixe",
+    "Phone Number": "Numéro de téléphone",
+    "Send Code": "Envoyer le code",
+    "Verification Code OTP": "Code de vérification OTP",
+    "A verification code has been sent to": "Un code de vérification a été envoyé à",
+    "Submit": "Soumettre",
+    "Didn't receive the code ?": "Vous n'avez pas reçu le code ?",
+    "Resend": "Renvoyer"
  
 }

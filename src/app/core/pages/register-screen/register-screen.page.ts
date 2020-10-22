@@ -16,7 +16,8 @@ export class RegisterScreenPage implements OnInit {
   registerForm: FormGroup;
   passwordVisibilty: boolean = false;
   isError: boolean;
-  
+  country: any;
+
   constructor(
     public router: Router,
     private _authService: AuthenticationService,
@@ -37,7 +38,7 @@ export class RegisterScreenPage implements OnInit {
   doRegister() {
     if (this.registerForm.valid) {
     //this._authService.login(this.username, this.password);
-    this.router.navigate(['/']);
+    this.router.navigate(['/verify-phone'], {queryParams: {country: encodeURI(JSON.stringify(this.country)) }});
     }
   }
 
@@ -57,13 +58,14 @@ export class RegisterScreenPage implements OnInit {
     const modal = await this.modalController.create({
       component: CountriesModalComponent,
       componentProps: {
-        selectedCountry: this.registerForm.get('country').value
+        selectedCountry: this.country
       }
     })
 
     modal.onDidDismiss().then((dataReturned) => {
       if (dataReturned !== null) {
-        this.registerForm.get('country').setValue(dataReturned.data)
+        this.country = dataReturned.data;
+        this.registerForm.get('country').setValue(dataReturned.data.name);
       }
     });
 
