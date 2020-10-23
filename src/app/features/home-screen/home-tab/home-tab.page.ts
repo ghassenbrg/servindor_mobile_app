@@ -33,22 +33,22 @@ export class HomeTabPage implements OnInit {
       {
         name: 'Travel & Transportation',
         description: 'Packer & Mover, Tour & Travel Service',
-        img: './assets/icon/travel-map.svg',
+        icon: 'icon-travel-map',
       },
       {
         name: 'Training & Education',
         description: 'Animal Training Center, Car Driving,Education Institute, Self Motivation Center',
-        img: './assets/icon/education.svg',
+        icon: 'icon-training',
       },
       {
         name: 'Pet Care',
         description: 'Wild Animal Care',
-        img: './assets/icon/pet.svg',
+        icon: 'icon-dog',
       },
       {
         name: 'Computer & Mobile Service',
         description: 'Computer & Laptop Repair, Hardware, Software',
-        img: './assets/icon/computer.svg',
+        icon: 'icon-computer-repair',
       },
     ];
   }

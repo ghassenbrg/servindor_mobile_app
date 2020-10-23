@@ -1,13 +1,9 @@
 <ion-card>
-  <ion-item
-    *ngFor="let item of items; let last = last"
-    [class.last-item]="last"
-    style="padding-right: 10px !important;
-    padding-left: 10px !important;
-    "
-    button
-  >
-    <img [src]="item.img" style="width: 10vw" />
+  <ion-item *ngFor="let item of items; let last = last" [class.last-item]="last" style="--inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    " button>
+    <i class="custom-icon" [ngClass]="item.icon"></i>
+    <!-- <img [src]="item.img" style="width: 10vw" /> -->
     <span style="padding: 10px">
       <div>
         {{ item.name }}
