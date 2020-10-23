@@ -1,0 +1,9 @@
+<ion-slides [pager]="pager" [options]="slideOpts">
+  <ion-slide *ngFor="let card of services">
+    <app-service-card
+      [isVerified]="card.isVerified"
+      [serviceProvider]="card.serviceProvider"
+      [serviceType]="card.serviceType"
+    ></app-service-card>
+  </ion-slide>
+</ion-slides>

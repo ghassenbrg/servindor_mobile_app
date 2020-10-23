@@ -1,0 +1,88 @@
+<ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-item class="service-photo">
+          <ion-img src="assets/img/default-user-pic.png"></ion-img>
+        </ion-item>
+      </ion-col>
+      <ion-col style="background-color: rgb(31, 46, 87)">
+        <ion-card-content style="padding: 0px">
+          <ion-item
+            color="rgb(31, 46, 87)"
+            lines="none"
+            style="margin-top: 12px; margin-bottom: 10px"
+          >
+            <ion-text style="color: white">
+              <h2>{{ serviceType }}</h2></ion-text
+            >
+          </ion-item>
+          <ion-item
+            color="rgb(31, 46, 87)"
+            lines="none"
+            style="margin-bottom: 10px"
+          >
+            <ion-img
+              class="profile-photo"
+              src="assets/img/default-user-pic.png"
+              style="margin-right: 8px"
+            ></ion-img>
+            <p style="color: white; font-weight: normal; font-size: small">
+              {{ serviceProvider }}
+            </p>
+            <i
+              *ngIf="isVerified"
+              class="fas fa-check-circle"
+              style="margin-left: 5px; color: #41d4fb"
+            ></i>
+          </ion-item>
+          <ion-item
+            color="rgb(31, 46, 87)"
+            lines="none"
+            style="margin-bottom: 4px"
+          >
+            <i
+              class="fas fa-map-marker-alt"
+              style="margin-right: 5px; color: #41d4fb; font-size: small"
+            ></i>
+
+            <span style="color: white; font-weight: normal; font-size: x-small"
+              >0.31 Km away, Borj Louzir</span
+            >
+          </ion-item>
+          <ion-item
+            color="rgb(31, 46, 87)"
+            lines="none"
+            style="margin-bottom: 4px"
+          >
+            <i
+              class="fas fa-star"
+              style="
+                margin-right: 5px;
+                color: #eee71b;
+                font-size: x-small;
+                padding-bottom: 2px;
+              "
+            ></i>
+            <span style="color: white; font-weight: normal; font-size: x-small"
+              >4,5/5 (721 reviews)</span
+            >
+          </ion-item>
+          <ion-item
+            color="rgb(31, 46, 87)"
+            lines="none"
+            style="margin-bottom: 12px"
+          >
+            <i
+              class="fas fa-money-bill-alt"
+              style="margin-right: 5px; color: #15c35f"
+            ></i>
+            <span style="color: white; font-weight: normal; font-size: x-small"
+              >20 TND/hour</span
+            >
+          </ion-item>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

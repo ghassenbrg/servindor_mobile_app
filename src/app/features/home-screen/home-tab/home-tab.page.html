@@ -1,3 +1,7 @@
 <ion-content>
   <app-home-header></app-home-header>
+  <app-section-title title="Featured Listing"></app-section-title>
+  <app-service-cards-slider pager="false" [services]="featuredServices"></app-service-cards-slider>
+  <app-section-title title="Top Sub-Categories"></app-section-title>
+  <app-categories-box [items]="categories"></app-categories-box>
 </ion-content>
