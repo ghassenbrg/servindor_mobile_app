@@ -28,5 +28,12 @@
 /* overrided style of ionic components */
 @import "./theme/overrided-style.scss";
 
+/* fonts */
+@import "./theme/fonts.scss";
+
 /* custom global style */
 @import "./theme/custom-style.scss";
+
+* {
+    font-family: 'SF Ui Display', 'Tajawal';
+}

@@ -37,7 +37,7 @@ export class HomeTabPage implements OnInit {
       },
       {
         name: 'Training & Education',
-        description: 'Animal Training Center, Car Driving,Education Institute, Self Motivation Center',
+        description: 'Animal Training Center, Car Driving, Education Institute, Self Motivation Center',
         icon: 'icon-training',
       },
       {

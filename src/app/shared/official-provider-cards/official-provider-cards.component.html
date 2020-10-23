@@ -1,0 +1,13 @@
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let provider of officialProviders" size="6" style="padding: 0; text-align: center;">
+        <ion-card class="ion-activatable">
+          <img [src]="provider.img" alt="" width="100%" height="120px">
+          <div style="padding: 10px; padding-right: 0; padding-right: 0;">
+            <ion-label>{{provider.label}}</ion-label>
+          </div>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

@@ -6,20 +6,23 @@ import { ServiceCardsSliderComponent } from "./service-cards-slider/service-card
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SectionTitleComponent } from "./section-title/section-title.component";
 import { CategoriesBoxComponent } from './categories-box/categories-box.component';
+import { OfficialProviderCardsComponent } from './official-provider-cards/official-provider-cards.component';
 
 @NgModule({
   declarations: [
     ServiceCardComponent,
     ServiceCardsSliderComponent,
     SectionTitleComponent,
-    CategoriesBoxComponent
+    CategoriesBoxComponent,
+    OfficialProviderCardsComponent
   ],
   imports: [CommonModule, IonicModule, FontAwesomeModule],
   exports: [
     ServiceCardComponent,
     ServiceCardsSliderComponent,
     SectionTitleComponent,
-    CategoriesBoxComponent
+    CategoriesBoxComponent,
+    OfficialProviderCardsComponent
   ],
 })
 export class SharedModule {}

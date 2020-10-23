@@ -10,27 +10,27 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule),
-    //canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {
     path: 'get-started',
-    loadChildren: () => import('./core/pages/get-started-screen/get-started-screen.module').then( m => m.GetStartedScreenPageModule)
+    loadChildren: () => import('./core/pages/get-started-screen/get-started-screen.module').then(m => m.GetStartedScreenPageModule)
   },
   {
     path: 'language',
-    loadChildren: () => import('./core/pages/choose-language-screen/choose-language-screen.module').then( m => m.ChooseLanguageScreenPageModule)
+    loadChildren: () => import('./core/pages/choose-language-screen/choose-language-screen.module').then(m => m.ChooseLanguageScreenPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./core/pages/register-screen/register-screen.module').then( m => m.RegisterScreenPageModule)
+    loadChildren: () => import('./core/pages/register-screen/register-screen.module').then(m => m.RegisterScreenPageModule)
   },
   {
     path: 'verify-phone',
-    loadChildren: () => import('./core/pages/verify-phone-number-screen/verify-phone-number-screen.module').then( m => m.VerifyPhoneNumberScreenPageModule)
+    loadChildren: () => import('./core/pages/verify-phone-number-screen/verify-phone-number-screen.module').then(m => m.VerifyPhoneNumberScreenPageModule)
   },
   {
     path: 'verify-otp',
-    loadChildren: () => import('./core/pages/verify-otp-screen/verify-otp-screen.module').then( m => m.VerifyOtpScreenPageModule)
+    loadChildren: () => import('./core/pages/verify-otp-screen/verify-otp-screen.module').then(m => m.VerifyOtpScreenPageModule)
   }
 ];
 @NgModule({
