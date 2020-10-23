@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ServiceCardsSliderComponent implements OnInit {
 
   slideOpts = {
-    autoHeight: 150,
     slidesPerView : 1.1,
     centeredSlides: true,
   };
