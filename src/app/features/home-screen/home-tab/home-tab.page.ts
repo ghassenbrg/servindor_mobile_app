@@ -11,7 +11,7 @@ export class HomeTabPage implements OnInit {
   categories: {}[];
 
   constructor(
-    private rootComponent: AppComponent
+    public rootComponent: AppComponent
   ) {}
 
   ngOnInit() {

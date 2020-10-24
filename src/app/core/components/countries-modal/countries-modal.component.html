@@ -2,7 +2,7 @@
 
   <div class="row align-items-center">
     <div class="col-auto">
-      <i class="fas" [ngClass]="direction == ltr? 'fa-chevron-left': 'fa-chevron-right'" style="font-size: 1.7em; color: #2ccdfa;" (click)="closeModal()"></i>
+      <i class="fas" [ngClass]="direction == 'ltr'? 'fa-chevron-left': 'fa-chevron-right'" style="font-size: 1.7em; color: #2ccdfa;" (click)="closeModal()"></i>
     </div>
     <div class="col {{'search-input-' + direction}}">
       <ion-item class="custom-ion-input">
@@ -20,7 +20,7 @@
   <div *ngIf="isLoaded" style="text-align: center;">
     <div *ngIf="filteredCountries.length == 0" style="padding-top: 15vh;">
       <i class=" icon-archive" style="color: grey; font-size: 3em;"></i>
-      <p style="color: grey;">{{'Tap to search' | translate}}...</p>
+      <p style="color: grey;">{{'Tap to search' | translate}}</p>
     </div>
     <ion-list>
       <ion-item class="country" *ngFor="let country of filteredCountries;"

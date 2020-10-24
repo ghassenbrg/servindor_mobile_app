@@ -23,7 +23,7 @@ export class RegisterScreenPage implements OnInit {
     public router: Router,
     private _authService: AuthenticationService,
     public modalController: ModalController,
-    private rootComponent: AppComponent
+    public rootComponent: AppComponent
   ) { }
 
   ngOnInit() {

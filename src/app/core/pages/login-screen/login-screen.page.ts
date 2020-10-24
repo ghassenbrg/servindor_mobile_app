@@ -18,7 +18,7 @@ export class LoginScreenPage implements OnInit {
   constructor(
     public router: Router,
     private _authService: AuthenticationService,
-    private rootComponent: AppComponent
+    public rootComponent: AppComponent
   ) { }
 
   ngOnInit() {

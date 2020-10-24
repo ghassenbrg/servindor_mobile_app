@@ -27,7 +27,7 @@ export class GetStartedScreenPage implements OnInit {
   constructor(
     public router: Router,
     private _storageApiService: StorageApiService,
-    private rootComponent: AppComponent
+    public rootComponent: AppComponent
     ) { }
 
   ngOnInit() {

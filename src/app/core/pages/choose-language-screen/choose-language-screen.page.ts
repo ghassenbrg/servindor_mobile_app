@@ -28,7 +28,7 @@ export class ChooseLanguageScreenPage implements OnInit {
     public router: Router,
     private _storageApiService: StorageApiService,
     private translate: TranslateService,
-    private rootComponent: AppComponent
+    public rootComponent: AppComponent
   ) { }
 
   ngOnInit() {
