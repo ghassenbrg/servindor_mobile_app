@@ -9,7 +9,8 @@ export class ServiceCardComponent implements OnInit {
   @Input() serviceType: string;
   @Input() serviceProvider: string;
   @Input() isVerified: string;
-
+  @Input() direction: string = 'ltr';
+  
   constructor() { }
 
   ngOnInit() {}

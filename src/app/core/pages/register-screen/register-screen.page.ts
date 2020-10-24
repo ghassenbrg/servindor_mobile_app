@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
 import { CountriesModalComponent } from '../../components/countries-modal/countries-modal.component';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { countries } from '../../static/countries';
@@ -21,7 +22,8 @@ export class RegisterScreenPage implements OnInit {
   constructor(
     public router: Router,
     private _authService: AuthenticationService,
-    public modalController: ModalController
+    public modalController: ModalController,
+    private rootComponent: AppComponent
   ) { }
 
   ngOnInit() {
@@ -58,7 +60,8 @@ export class RegisterScreenPage implements OnInit {
     const modal = await this.modalController.create({
       component: CountriesModalComponent,
       componentProps: {
-        selectedCountry: this.country
+        selectedCountry: this.country,
+        direction: this.rootComponent.direction
       }
     })
 

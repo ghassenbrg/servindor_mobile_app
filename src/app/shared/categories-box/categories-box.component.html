@@ -12,6 +12,6 @@
         {{ item.description }}
       </div>
     </span>
-    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    <ion-icon [name]="direction == 'ltr'? 'chevron-forward-outline': 'chevron-back-outline'" slot="end"></ion-icon>
   </ion-item>
 </ion-card>

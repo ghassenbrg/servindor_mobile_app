@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 import { AuthenticationService } from '../../services/authentication/authentication.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class LoginScreenPage implements OnInit {
 
   constructor(
     public router: Router,
-    private _authService: AuthenticationService
+    private _authService: AuthenticationService,
+    private rootComponent: AppComponent
   ) { }
 
   ngOnInit() {

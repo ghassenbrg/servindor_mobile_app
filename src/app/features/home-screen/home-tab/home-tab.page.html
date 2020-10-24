@@ -1,13 +1,13 @@
 <ion-content>
-  <app-home-header></app-home-header>
+  <app-home-header [direction]="rootComponent.direction"></app-home-header>
   <div class="margin-span-10"></div>
   <app-section-title [title]="'Featured Listing' | translate"></app-section-title>
   <div class="margin-span-10"></div>
-  <app-service-cards-slider pager="false" [services]="featuredServices"></app-service-cards-slider>
+  <app-service-cards-slider [direction]="rootComponent.direction" pager="false" [services]="featuredServices"></app-service-cards-slider>
   <div class="margin-span-10"></div>
   <app-section-title [title]="'Top Sub-Categories' | translate"></app-section-title>
   <div class="margin-span-20"></div>
-  <app-categories-box [items]="categories"></app-categories-box>
+  <app-categories-box [direction]="rootComponent.direction" [items]="categories"></app-categories-box>
   <div class="margin-span-10"></div>
   <app-section-title [title]="'Official Service Providers' | translate"></app-section-title>
   <div class="margin-span-10"></div>

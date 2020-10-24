@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonSlides } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
 import { GeneralConfig } from '../../models/generalConfig.model';
 import { StorageApiService } from '../../services/Storage/storage-api.service';
 
@@ -25,7 +26,8 @@ export class GetStartedScreenPage implements OnInit {
 
   constructor(
     public router: Router,
-    private _storageApiService: StorageApiService
+    private _storageApiService: StorageApiService,
+    private rootComponent: AppComponent
     ) { }
 
   ngOnInit() {

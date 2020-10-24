@@ -24,3 +24,28 @@ ion-item {
     --inner-box-shadow: none;
     --min-height: 16px;
 }
+
+/* rtl support */
+.profile-photo-ltr {
+    margin-right: 8px;
+}
+
+.profile-photo-rtl {
+    margin-left: 8px;
+}
+
+.side-margin-icon-ltr {
+    margin-right: 5px;
+}
+
+.side-margin-icon-rtl {
+    margin-left: 5px;
+}
+
+.verified-margin-icon-ltr {
+    margin-left: 5px;
+}
+
+.verified-margin-icon-rtl {
+    margin-right: 5px;
+}

@@ -14,7 +14,8 @@ export class ServiceCardsSliderComponent implements OnInit {
 
   @Input() services;
   @Input() pager;
-
+  @Input() direction: string = 'ltr';
+  
   constructor() { }
 
   ngOnInit() {}

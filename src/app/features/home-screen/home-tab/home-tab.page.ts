@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-home-tab',
@@ -9,7 +10,9 @@ export class HomeTabPage implements OnInit {
   featuredServices: {}[];
   categories: {}[];
 
-  constructor() {}
+  constructor(
+    private rootComponent: AppComponent
+  ) {}
 
   ngOnInit() {
     this.featuredServices = [

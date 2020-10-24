@@ -28,7 +28,7 @@ export class ChooseLanguageScreenPage implements OnInit {
     public router: Router,
     private _storageApiService: StorageApiService,
     private translate: TranslateService,
-    private appComponent: AppComponent
+    private rootComponent: AppComponent
   ) { }
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class ChooseLanguageScreenPage implements OnInit {
         this.generalConfig = config;
         if (config.language) {
           this.translate.use(config.language);
-          this.appComponent.direction = config.direction;
+          this.rootComponent.direction = config.direction;
         }
       } else {
         this.generalConfig = new GeneralConfig;
@@ -54,7 +54,7 @@ export class ChooseLanguageScreenPage implements OnInit {
   doConfirm() {
     this.generalConfig.language = this.selectedLanguage.value;
     this.generalConfig.direction = this.selectedLanguage.direction;
-    this.appComponent.direction = this.selectedLanguage.direction;
+    this.rootComponent.direction = this.selectedLanguage.direction;
     this._storageApiService.setGeneralConfig(this.generalConfig).then(res => {
       this.router.navigate(['/']);
     });

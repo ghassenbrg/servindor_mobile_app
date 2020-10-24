@@ -3,8 +3,8 @@
     <div class="col-auto location">
       <ion-item class="custom-color transparent-bg" style="--padding-start: 0;" lines="none">
         <ion-icon name="location-outline" color="primary"></ion-icon>
-        <ion-label style="padding-left: 5px; padding-right: 10px;">Ariana, Tunisia</ion-label>
-        <i class="fas fa-sort-down"></i>
+        <ion-label class="{{'location-label-' + direction}}">Ariana, Tunisia</ion-label>
+        <i class="fas fa-chevron-down"></i>
       </ion-item>
     </div>
     <div class="col"></div>
@@ -20,7 +20,7 @@
   </ion-item>
   <div class="row main-categories">
     <div class="col-3 cat-col beauty">
-      <div class="cat cat-bottom-border cat-right-border ion-activatable">
+      <div class="cat cat-bottom-border {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-beauty-treatment cat-icon" style="color: #EB4C9B;"></i>
         <br>
         <ion-label class="cat-label">Beauty</ion-label>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="col-3 cat-col health">
-      <div class="cat cat-bottom-border cat-right-border ion-activatable">
+      <div class="cat cat-bottom-border {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-health-insurance cat-icon" style="color: #29B473;"></i>
         <br>
         <ion-label class="cat-label">Health</ion-label>
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="col-3 cat-col it">
-      <div class="cat cat-bottom-border cat-right-border ion-activatable">
+      <div class="cat cat-bottom-border {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-programmer cat-icon" style="color: #FFB440;"></i>
         <br>
         <ion-label class="cat-label">IT</ion-label>
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="col-3 cat-col business">
-      <div class="cat cat-right-border ion-activatable">
+      <div class="cat {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-international-business cat-icon" style="color: #21ABE4;"></i>
         <br>
         <ion-label class="cat-label">Business</ion-label>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="col-3 cat-col event">
-      <div class="cat cat-right-border ion-activatable">
+      <div class="cat {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-event cat-icon" style="color: #8BC439;"></i>
         <br>
         <ion-label class="cat-label">Event</ion-label>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div class="col-3 cat-col repairs">
-      <div class="cat cat-right-border ion-activatable">
+      <div class="cat {{'cat-side-border-' + direction}} ion-activatable">
         <i class="icon-repair-tools cat-icon" style="color: #18B0A9;"></i>
         <br>
         <ion-label class="cat-label">Repairs</ion-label>

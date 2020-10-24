@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CategoriesBoxComponent implements OnInit {
   @Input() items;
-
+  @Input() direction: string = 'ltr';
   constructor() { }
 
   ngOnInit() {}

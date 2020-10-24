@@ -1,6 +1,6 @@
 <ion-slides [pager]="pager" [options]="slideOpts">
   <ion-slide *ngFor="let card of services">
-    <app-service-card
+    <app-service-card [direction] = "direction"
       [isVerified]="card.isVerified"
       [serviceProvider]="card.serviceProvider"
       [serviceType]="card.serviceType"

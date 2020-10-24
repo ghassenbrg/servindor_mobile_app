@@ -30,10 +30,6 @@
     border-bottom: 1px solid #43495D;
 }
 
-.cat-right-border {
-    border-right: 1px solid #43495D;
-}
-
 .cat-icon {
     font-size: 2.5em;
 }
@@ -50,4 +46,23 @@
 .transparent-bg {
     background: transparent;
     --background: transaprent;
+}
+
+/* rtl support */
+.location-label-ltr {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.location-label-rtl {
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.cat-side-border-ltr {
+    border-right: 1px solid #43495D;
+}
+
+.cat-side-border-rtl {
+    border-left: 1px solid #43495D;
 }

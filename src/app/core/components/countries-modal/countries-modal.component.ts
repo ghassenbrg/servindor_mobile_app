@@ -12,6 +12,7 @@ export class CountriesModalComponent implements OnInit {
   countries: any[] = countries;
   filteredCountries: any[] = [];
   public selectedCountry: any = this.navParams.get('selectedCountry');
+  public direction: string = this.navParams.get('direction');
   isLoaded: boolean;
 
   @ViewChild('searchInput', { static: false }) searchInput: { setFocus: () => void; };

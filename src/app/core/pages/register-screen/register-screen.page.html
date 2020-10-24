@@ -10,14 +10,14 @@
               <p>{{'Please Sign Up to use Servindor services' | translate}}</p>
               <div class="row primary-margin-top">
                 <div class="col no-padding">
-                  <ion-button class="facebook-btn" (click)="doFacebookRegister()">
-                    <ion-icon style=" margin-right: 10px;" name="logo-facebook"></ion-icon>
+                  <ion-button class="facebook-btn" (click)="doFacebookLogin()">
+                    <ion-icon class="{{'social-icon-'+ rootComponent.direction}}" name="logo-facebook"></ion-icon>
                     {{'Facebook' | translate}}
                   </ion-button>
                 </div>
                 <div class="col no-padding">
-                  <ion-button class="google-btn" (click)="doGoogleRegister()">
-                    <ion-icon style=" margin-right: 10px;" name="logo-google"></ion-icon>
+                  <ion-button class="google-btn" (click)="doGoogleLogin()">
+                    <ion-icon class="{{'social-icon-'+ rootComponent.direction}}" name="logo-google"></ion-icon>
                     {{'Google' | translate}}
                   </ion-button>
                 </div>

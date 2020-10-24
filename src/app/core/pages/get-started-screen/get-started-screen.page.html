@@ -36,8 +36,8 @@
         <div class="row align-items-center" *ngIf="slidesLength > currentSlideIndex + 1">
           <div class="col">
             <i class="fas fa-circle dot" [ngClass]="currentSlideIndex == 0? 'primary-color': 'inactive-dot'"></i>
-            <i class="fas fa-circle dot dot-margin" [ngClass]="currentSlideIndex == 1? 'active-dot': 'inactive-dot'"></i>
-            <i class="fas fa-circle dot dot-margin" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot {{'dot-margin-' + rootComponent.direction}}" [ngClass]="currentSlideIndex == 1? 'active-dot': 'inactive-dot'"></i>
+            <i class="fas fa-circle dot {{'dot-margin-' + rootComponent.direction}}" [ngClass]="currentSlideIndex == 2? 'active-dot': 'inactive-dot'"></i>
           </div>
           <div class="col">
             <ion-button expand="block" (click)="slides.slideNext()"  [translate]="'Next'"></ion-button>
