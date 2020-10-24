@@ -40,7 +40,7 @@ export class VerifyPhoneNumberScreenPage implements OnInit {
     })
 
     modal.onDidDismiss().then((dataReturned) => {
-      if (dataReturned !== null) {
+      if (dataReturned && dataReturned.data) {
         this.country = dataReturned.data;
         this.countryPhoneCode = dataReturned.data.dial_code;
       }

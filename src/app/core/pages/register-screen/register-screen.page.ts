@@ -63,7 +63,7 @@ export class RegisterScreenPage implements OnInit {
     })
 
     modal.onDidDismiss().then((dataReturned) => {
-      if (dataReturned !== null) {
+      if (dataReturned && dataReturned.data) {
         this.country = dataReturned.data;
         this.registerForm.get('country').setValue(dataReturned.data.name);
       }

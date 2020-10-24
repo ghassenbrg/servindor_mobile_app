@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
 import { countries } from '../../static/countries';
 
@@ -10,9 +10,11 @@ import { countries } from '../../static/countries';
 export class CountriesModalComponent implements OnInit {
 
   countries: any[] = countries;
-  filteredCountries: any[] = countries;
+  filteredCountries: any[] = [];
   public selectedCountry: any = this.navParams.get('selectedCountry');
   isLoaded: boolean;
+
+  @ViewChild('searchInput', { static: false }) searchInput: { setFocus: () => void; };
 
   constructor(
     private modalController: ModalController,
@@ -25,9 +27,19 @@ export class CountriesModalComponent implements OnInit {
     }, 0);
   }
 
+  ionViewDidEnter() {
+    setTimeout(() => {
+      this.searchInput.setFocus();
+    }, 0);
+  }
+
   filter(event) {
     const filterValue: string = event.detail.value ? event.detail.value : '';
-    this.filteredCountries = this.countries.filter(country => country.name.toLowerCase().startsWith(filterValue.toLowerCase()));
+    if (filterValue == '') {
+      this.filteredCountries = [];
+    } else {
+      this.filteredCountries = this.countries.filter(country => country.name.toLowerCase().startsWith(filterValue.toLowerCase()));
+    }
   }
 
 

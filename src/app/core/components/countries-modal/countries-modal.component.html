@@ -6,7 +6,8 @@
     </div>
     <div class="col" style="padding-left: 0;">
       <ion-item class="custom-ion-input">
-        <ion-input placeholder="{{'search for a country' | translate}}" (ionChange)="filter($event)"></ion-input>
+        <ion-input #searchInput placeholder="{{'search for a country' | translate}}" (ionChange)="filter($event)">
+        </ion-input>
         <ion-icon class="primary-color" name="search-outline"></ion-icon>
       </ion-item>
     </div>
@@ -15,13 +16,21 @@
 </ion-toolbar>
 
 <ion-content class="primary-padding-left primary-padding-right">
-<p *ngIf="!isLoaded" class="primary-color primary-padding-left" style="color: grey;">Loading...</p>
-  <ion-list *ngIf="isLoaded">
-    <ion-item class="country" *ngFor="let country of filteredCountries;"
-      [ngClass]="selectedCountry && selectedCountry.name == country.name? 'selected-country': ''" (click)='changeSelectedCountry(country)'>
-      <i class="flag-icon-squared custom-flag-icon" [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
-      <ion-label>{{country.name}}</ion-label>
-    </ion-item>
-  </ion-list>
+  <p *ngIf="!isLoaded" class="primary-color primary-padding-left" style="color: grey;">Loading...</p>
+  <div *ngIf="isLoaded" style="text-align: center;">
+    <div *ngIf="filteredCountries.length == 0" style="padding-top: 15vh;">
+      <i class=" icon-archive" style="color: grey; font-size: 3em;"></i>
+      <p style="color: grey;">Tap to search...</p>
+    </div>
+    <ion-list>
+      <ion-item class="country" *ngFor="let country of filteredCountries;"
+        [ngClass]="selectedCountry && selectedCountry.name == country.name? 'selected-country': ''"
+        (click)='changeSelectedCountry(country)'>
+        <i class="flag-icon-squared custom-flag-icon"
+          [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
+        <ion-label>{{country.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 
 </ion-content>
