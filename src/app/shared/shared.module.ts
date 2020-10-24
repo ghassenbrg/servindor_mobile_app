@@ -7,6 +7,9 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SectionTitleComponent } from "./section-title/section-title.component";
 import { CategoriesBoxComponent } from './categories-box/categories-box.component';
 import { OfficialProviderCardsComponent } from './official-provider-cards/official-provider-cards.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from '../core/services/i18n/httpLoaderFactory';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,17 @@ import { OfficialProviderCardsComponent } from './official-provider-cards/offici
     CategoriesBoxComponent,
     OfficialProviderCardsComponent
   ],
-  imports: [CommonModule, IonicModule, FontAwesomeModule],
+  imports: [
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    CommonModule,
+    IonicModule,
+    FontAwesomeModule],
   exports: [
     ServiceCardComponent,
     ServiceCardsSliderComponent,

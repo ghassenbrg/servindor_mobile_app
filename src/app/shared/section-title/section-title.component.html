@@ -1,8 +1,13 @@
 <ion-item>
-  <div class="title">
-    {{title}}
+  <div class="row align-items-center" style="width: 99vw;">
+    <div class="col">
+      <span class="title">{{title}}</span>
+    </div>
+    <div class="col-auto">
+      <ion-button class="view-all-btn" slot="end">
+        {{'View All' | translate}} 
+      </ion-button>
+    </div>
   </div>
-  <ion-button class="view-all-btn" slot="end">
-    View All 
-  </ion-button>
+
 </ion-item>
