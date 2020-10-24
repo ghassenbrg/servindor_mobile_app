@@ -39,6 +39,10 @@
     "Official Service Providers": "Official Service Providers",
     "View All": "View All",
     "Loading": "Loading",
-    "Tap to search": "Tap to search"
- 
+    "Tap to search": "Tap to search",
+    "Home": "Home",
+    "Favorites": "Favorites",
+    "Requests": "Requests",
+    "Messages": "Messages",
+    "Account": "Account"
 }
