@@ -13,7 +13,6 @@
 }
 
 .custom-flag-icon {
-    margin-right: 10px;
     font-size: 2em;
     border-radius: 50%;
 }
@@ -24,4 +23,21 @@
 
 .search-input-rtl {
     padding-right: 0;
+}
+
+/* RTL Support */
+.search-input-ltr {
+    padding-left: 0;
+}
+
+.search-input-rtl {
+    padding-right: 0;
+}
+
+.flag-icon-ltr {
+    margin-right: 10px;
+}
+
+.flag-icon-rtl {
+    margin-left: 10px;
 }

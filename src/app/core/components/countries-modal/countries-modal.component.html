@@ -26,7 +26,7 @@
       <ion-item class="country" *ngFor="let country of filteredCountries;"
         [ngClass]="selectedCountry && selectedCountry.name == country.name? 'selected-country': ''"
         (click)='changeSelectedCountry(country)'>
-        <i class="flag-icon-squared custom-flag-icon"
+        <i class="flag-icon-squared custom-flag-icon {{'flag-icon-' + direction}}"
           [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
         <ion-label>{{country.name}}</ion-label>
       </ion-item>

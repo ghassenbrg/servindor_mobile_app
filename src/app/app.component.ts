@@ -15,6 +15,7 @@ const { SplashScreen } = Plugins;
 })
 export class AppComponent {
   direction: string = 'ltr';
+  language: string = 'en';
 
   constructor(
     private platform: Platform,
@@ -34,10 +35,11 @@ export class AppComponent {
       //this.nativeSplashScreen.hide();
       SplashScreen.hide();
     });
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang(this.language);
     this._storageApiService.getGeneralConfig().then(config => {
       if (config && config.language) {
         this.translate.use(config.language);
+        this.language = config.language;
         this.direction = config.direction;
       }
     })
