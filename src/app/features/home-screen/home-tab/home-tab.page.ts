@@ -17,17 +17,17 @@ export class HomeTabPage implements OnInit {
   ngOnInit() {
     this.featuredServices = [
       {
-        isVerified: 'true',
+        isVerified: true,
         serviceProvider: 'Express Home',
         serviceType: 'Plumbing Service',
       },
       {
-        isVerified: 'true',
+        isVerified: true,
         serviceProvider: 'Telecom',
         serviceType: 'Internet Service',
       },
       {
-        isVerified: 'false',
+        isVerified: false,
         serviceProvider: 'Express Cleaning',
         serviceType: 'Cleaning Service',
       },

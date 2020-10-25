@@ -13,6 +13,6 @@ export class ServiceCardComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {console.log(this.isVerified)}
 
 }
