@@ -15,8 +15,7 @@
 
 <ion-content>
   <ion-list no-padding >
-    <ion-item *ngFor="let chat of chatData"  lines="none">
-      <div class="borderBottomLine"></div>
+    <ion-item *ngFor="let chat of chatData; let i = index" [ngClass]="{'borderBottomLine': chatData.length - 1 > i}"  lines="none">
       <div class="listSection">
         <div class="UserimgSection">
           <ion-avatar class="chatImage" slot="start">
