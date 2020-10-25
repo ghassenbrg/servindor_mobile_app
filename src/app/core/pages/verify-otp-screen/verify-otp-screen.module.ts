@@ -10,6 +10,7 @@ import { VerifyOtpScreenPage } from './verify-otp-screen.page';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../../services/i18n/httpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
+import { CountdownModule } from 'ngx-countdown';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { HttpClient } from '@angular/common/http';
         deps: [HttpClient]
       }
     }),
+    CountdownModule,
     CommonModule,
     FormsModule,
     IonicModule,

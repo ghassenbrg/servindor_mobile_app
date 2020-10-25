@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { AppComponent } from 'src/app/app.component';
 import { CountriesModalComponent } from '../../components/countries-modal/countries-modal.component';
 
 @Component({
@@ -17,13 +18,18 @@ export class VerifyPhoneNumberScreenPage implements OnInit {
   constructor(
     public router: Router,
     public modalController: ModalController,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public rootComponent: AppComponent
     ) { }
 
   ngOnInit() {
-    if (this.route.snapshot.queryParams.country) {
+    if (this.route.snapshot.queryParams.country) { 
       this.country = JSON.parse(decodeURI(this.route.snapshot.queryParams.country));
       this.countryPhoneCode = this.country.dial_code;
+    } else {
+      let dial_code = decodeURI(this.route.snapshot.queryParams.countryPhoneCode);
+      this.countryPhoneCode = dial_code != 'undefined'? dial_code: '';
+      this.phoneNumber = this.route.snapshot.queryParams.phoneNumber;
     }
   }
 
@@ -35,7 +41,8 @@ export class VerifyPhoneNumberScreenPage implements OnInit {
     const modal = await this.modalController.create({
       component: CountriesModalComponent,
       componentProps: {
-        selectedCountry: this.country
+        selectedCountry: this.country,
+        direction: this.rootComponent.direction
       }
     })
 

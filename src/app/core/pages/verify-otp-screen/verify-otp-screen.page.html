@@ -9,9 +9,9 @@
             <div class="custom-form primary-padding" style="text-align: initial;">
               <h2 class="no-margin">{{'Verification Code OTP' | translate}}</h2>
               <p style="margin-bottom: 2px;">{{'A verification code has been sent to' | translate}}</p>
-              <p style="font-weight: bold; margin: 0;">({{countryPhoneCode}}) {{phoneNumber}}</p>
+              <p style="font-weight: bold; margin: 0;"><span dir="ltr">({{countryPhoneCode}}) {{phoneNumber}}</span></p>
               <form [formGroup]="codeForm">
-                <div class="row primary-margin-top">
+                <div class="row primary-margin-top" dir="ltr">
                   <div class="col custom-margin-right dig-1">
                     <ion-item style="text-align: center;" class="custom-ion-input">
                       <ion-input #input_dig_1 placeholder="0" formControlName="dig_1" type="number"
@@ -57,8 +57,15 @@
               <div style="padding-top: 10px; text-align: center;">
                 <p class="no-margin" (click)="doResend()">
                   {{"Didn't receive the code ?" | translate}}
-                  <b>{{'Resend' | translate}} (39s)</b>
+                  <b>
+                    {{'Resend' | translate}}
+                    <span *ngIf="!countDownDone">
+                      (<countdown #countdown [config]="{leftTime: 40, format: 'ss'}" (event)="handleCountdown($event)">
+                      </countdown>s)
+                    </span>
+                  </b>
                 </p>
+                <p (click)="doChangePhoneNumber()">{{'Change phone number' | translate}}</p>
               </div>
             </div>
           </div>

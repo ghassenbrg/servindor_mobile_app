@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-verify-otp-screen',
@@ -19,10 +20,16 @@ export class VerifyOtpScreenPage implements OnInit {
   digBackUp: any[] = [null, null, null, null, null];
   countryPhoneCode: string;
   phoneNumber: string;
+  countDownDone: boolean;
 
-  constructor(public router: Router, private route: ActivatedRoute) { }
+  constructor(
+    public router: Router,
+    private route: ActivatedRoute,
+    public rootComponent: AppComponent
+    ) { }
 
   ngOnInit() {
+    console.log('test')
     if (this.route.snapshot.queryParams.countryPhoneCode && this.route.snapshot.queryParams.phoneNumber) {
       this.countryPhoneCode = decodeURI(this.route.snapshot.queryParams.countryPhoneCode);
       this.phoneNumber = this.route.snapshot.queryParams.phoneNumber;
@@ -83,7 +90,19 @@ export class VerifyOtpScreenPage implements OnInit {
   }
 
   doResend() {
-    this.router.navigate(['/']);
+    if (this.countDownDone) {
+      this.router.navigate(['/']);
+    }
+  }
+
+  doChangePhoneNumber() {
+    this.router.navigate(['/verify-phone'], {queryParams: {countryPhoneCode: encodeURI(this.countryPhoneCode), phoneNumber: this.phoneNumber}});
+  }
+
+  handleCountdown(event) {
+    if (event.action == 'done') {
+      this.countDownDone = true;
+    }
   }
 
 }
