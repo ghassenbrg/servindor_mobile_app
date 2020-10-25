@@ -28,7 +28,7 @@
         (click)='changeSelectedCountry(country)'>
         <i class="flag-icon-squared custom-flag-icon {{'flag-icon-' + direction}}"
           [ngClass]="'flag-icon flag-icon-' + country.code.toLowerCase()"></i>
-        <ion-label>{{country.name}}</ion-label>
+        <ion-label>{{country.wording && country.wording[language]? country.wording[language] : country.name}}</ion-label>
       </ion-item>
     </ion-list>
   </div>

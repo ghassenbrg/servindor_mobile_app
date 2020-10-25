@@ -42,7 +42,8 @@ export class VerifyPhoneNumberScreenPage implements OnInit {
       component: CountriesModalComponent,
       componentProps: {
         selectedCountry: this.country,
-        direction: this.rootComponent.direction
+        direction: this.rootComponent.direction,
+        language: this.rootComponent.language
       }
     })
 

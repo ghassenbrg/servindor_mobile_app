@@ -13,6 +13,7 @@ export class CountriesModalComponent implements OnInit {
   filteredCountries: any[] = [];
   public selectedCountry: any = this.navParams.get('selectedCountry');
   public direction: string = this.navParams.get('direction');
+  public language: string = this.navParams.get('language');
   isLoaded: boolean;
 
   @ViewChild('searchInput', { static: false }) searchInput: { setFocus: () => void; };
@@ -39,7 +40,11 @@ export class CountriesModalComponent implements OnInit {
     if (filterValue == '') {
       this.filteredCountries = [];
     } else {
-      this.filteredCountries = this.countries.filter(country => country.name.toLowerCase().startsWith(filterValue.toLowerCase()));
+      this.filteredCountries = this.countries.filter(country => {
+        let wordingFilter = country.wording && country.wording[this.language] ? 
+        country.wording[this.language].toLowerCase().startsWith(filterValue.toLowerCase()) : false;
+        return country.name.toLowerCase().startsWith(filterValue.toLowerCase()) || wordingFilter;
+      });
     }
   }
 

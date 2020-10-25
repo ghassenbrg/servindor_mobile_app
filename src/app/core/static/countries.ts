@@ -1107,7 +1107,13 @@ export const countries = [
   {
       "name": "Tunisia",
       "dial_code": "+216",
-      "code": "TN"
+      "code": "TN",
+      "wording": {
+          "en": "Tunisia",
+          "fr": "Tunisie",
+          "ar": "تونس",
+          "tn": "تونس",
+      }
   },
   {
       "name": "Turkey",
