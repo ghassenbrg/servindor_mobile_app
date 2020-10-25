@@ -60,7 +60,7 @@
                   </ion-icon>
                 </ion-item>
                 <ion-item class="custom-ion-input  primary-margin-top">
-                  <i class="flag-icon-squared custom-flag-icon" style="margin-right: 4px;"
+                  <i class="flag-icon-squared custom-flag-icon {{'flag-icon-margin-' + rootComponent.direction}}"
                     [ngClass]="country && country.code? 'flag-icon flag-icon-' + country.code.toLowerCase(): ''"></i>
                   <ion-input placeholder="{{'Country' | translate}}" formControlName="country" type="text"
                     (ionFocus)="openModal()">

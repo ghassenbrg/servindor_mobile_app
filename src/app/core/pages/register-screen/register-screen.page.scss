@@ -72,6 +72,15 @@
     border-radius: 50%;
 }
 
+/* RTL Supprt */
+.flag-icon-margin-ltr {
+    margin-right: 10px;
+}
+
+.flag-icon-margin-rtl {
+    margin-left: 10px;
+}
+
 .social-icon-ltr {
     margin-right: 10px;
 }
