@@ -1,4 +1,4 @@
-<ion-content>
+<ion-header>
   <ion-toolbar class="toolbar">
     <div class="search-container">
       <div class="row align-items-center search-header">
@@ -88,13 +88,15 @@
       </div>
     </div>
   </ion-toolbar>
+</ion-header>
+<ion-content>
   <ion-slides class="search-results" (ionSlidePrevStart)="switchMode('SLIDER_EVENT')"
     (ionSlideNextStart)="switchMode('SLIDER_EVENT')" #slides>
     <ion-slide class="list">
-      <br> List
+      <app-search-result-list></app-search-result-list>
     </ion-slide>
-    <ion-slide  class="map">
-      <br> Map
+    <ion-slide class="map">
+      <app-search-result-map></app-search-result-map>
     </ion-slide>
   </ion-slides>
 </ion-content>

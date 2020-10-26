@@ -1,0 +1,29 @@
+.sort-by {
+    background: #F8F8FA;
+}
+
+.sorted-by-input {
+    --background: #2ccdfa;
+}
+
+.borderBottomLine {
+    border-bottom: 1px solid #cfcfd1;
+}
+
+ion-toggle {
+    --background: #136379;
+    --background-checked: #136379;
+
+    --handle-background: white;
+    --handle-background-checked: white;
+}
+
+.service {
+    padding-top: 8px;
+    padding-bottom: 5px;
+}
+.service-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}

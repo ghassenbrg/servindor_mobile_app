@@ -10,6 +10,8 @@ import { OfficialProviderCardsComponent } from './official-provider-cards/offici
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../core/services/i18n/httpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
+import { SearchResultListComponent } from './search-result-list/search-result-list.component';
+import { SearchResultMapComponent } from './search-result-map/search-result-map.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { HttpClient } from '@angular/common/http';
     ServiceCardsSliderComponent,
     SectionTitleComponent,
     CategoriesBoxComponent,
-    OfficialProviderCardsComponent
+    OfficialProviderCardsComponent,
+    SearchResultListComponent,
+    SearchResultMapComponent
   ],
   imports: [
     TranslateModule.forChild({
@@ -35,7 +39,9 @@ import { HttpClient } from '@angular/common/http';
     ServiceCardsSliderComponent,
     SectionTitleComponent,
     CategoriesBoxComponent,
-    OfficialProviderCardsComponent
+    OfficialProviderCardsComponent,
+    SearchResultListComponent,
+    SearchResultMapComponent
   ],
 })
 export class SharedModule {}

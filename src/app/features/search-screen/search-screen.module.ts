@@ -10,6 +10,7 @@ import { SearchScreenPage } from './search-screen.page';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from 'src/app/core/services/i18n/httpLoaderFactory';
 import { HttpClient } from '@angular/common/http';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { HttpClient } from '@angular/common/http';
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     SearchScreenPageRoutingModule
   ],
   declarations: [SearchScreenPage]
