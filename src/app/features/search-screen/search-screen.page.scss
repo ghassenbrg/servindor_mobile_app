@@ -1,0 +1,65 @@
+.toolbar {
+    --padding-top: 10px;
+    color: white;
+    text-align: center;
+    --background: rgb(28, 34, 54);
+    --background: linear-gradient(0deg, rgba(28, 34, 54, 1) 0%, rgba(38, 46, 72, 1) 60%, rgba(57, 67, 103, 1) 100%);
+
+}
+
+.search-container {
+    padding: 10px;
+    padding-top: 0;
+}
+
+.search-input {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.filter-input {
+    margin-top: 10px;
+}
+
+.price-range ion-input {
+    text-align: center;
+}
+
+.search-mode-btn {
+    margin: 0;
+    --background: transparent;
+    --border-radius: 0;
+}
+
+.active-mode {
+    border-bottom: 6px solid #2ccdfa;
+}
+
+.filter-container {
+    overflow: hidden;
+}
+
+/* RTL Supprt */
+.side-margin-icon-ltr {
+    margin-right: 10px;
+}
+
+.side-margin-icon-rtl {
+    margin-left: 10px;
+}
+
+.mode-list-ltr {
+    padding-right: 0;
+}
+
+.mode-list-rtl {
+    padding-left: 0;
+}
+
+.mode-map-ltr {
+    padding-left: 0;
+}
+
+.mode-map-rtl {
+    padding-right: 0;
+}

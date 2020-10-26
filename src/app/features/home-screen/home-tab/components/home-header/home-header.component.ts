@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-header',
@@ -9,8 +10,12 @@ export class HomeHeaderComponent implements OnInit {
 
   @Input() direction: string = 'ltr';
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
+
+  navigateToSearchPage() {
+    this.router.navigate(['/search'])
+  }
 
 }

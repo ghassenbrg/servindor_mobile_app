@@ -21,6 +21,8 @@ import {
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +38,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
       },
     }),
     IonicModule.forRoot({ mode: "md", backButtonText: "" }),
+    BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
     SharedModule,

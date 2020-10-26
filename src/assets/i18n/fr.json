@@ -45,5 +45,13 @@
     "Requests": "Demandes",
     "Messages": "Messages",
     "Account": "Compte",
-    "Change phone number": "Changer de numéro de téléphone"
+    "Change phone number": "Changer de numéro de téléphone",
+    "Location": "Emplacement",
+    "Category": "Catégorie",
+    "Sub-Category": "Sous-catégorie",
+    "min": "min",
+    "max": "max",
+    "TND": "TND",
+    "List": "Liste",
+    "Map": "Carte"
 }

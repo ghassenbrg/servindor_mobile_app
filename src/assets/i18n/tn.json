@@ -45,5 +45,13 @@
     "Requests": "اللّي طلبتهم",
     "Messages": "الميسجات",
     "Account": "الكونت",
-    "Change phone number": "بدّل نومرو التليفون"
+    "Change phone number": "بدّل نومرو التليفون",
+    "Location": "بلاصتك",
+    "Category": "الكاتغوري",
+    "Sub-Category": "ساب-كاتغوري",
+    "min": "الأرخص",
+    "max": "الأغلى",
+    "TND": "د.ت",
+    "List": "ليستا",
+    "Map": "خريطة"
 }

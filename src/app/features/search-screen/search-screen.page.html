@@ -1,0 +1,100 @@
+<ion-content>
+  <ion-toolbar class="toolbar">
+    <div class="search-container">
+      <div class="row align-items-center search-header">
+        <div class="col-auto">
+          <i class="fas" [ngClass]="rootComponent.direction == 'ltr'? 'fa-chevron-left': 'fa-chevron-right'"
+            style="font-size: 1.7em; color: white;" (click)="location.back()"></i>
+        </div>
+        <div class="col search-input">
+          <ion-item class="custom-ion-input">
+            <ion-input #searchInput placeholder="{{'Search for service' | translate}}">
+            </ion-input>
+            <ion-icon class="primary-color" name="search-outline"></ion-icon>
+          </ion-item>
+        </div>
+        <div class="col-auto">
+          <i class="fas fa-filter" style="font-size: 1.7em;"
+            [ngStyle]="{'color': filterCurrentState == 'close' ? 'white' : '#2ccdfa'}" (click)="changeFilterState()">
+          </i>
+        </div>
+      </div>
+      <div class="filter-container" [@expandCollapse]=filterCurrentState>
+        <hr style="background: #646C86; margin: 10px; margin-bottom: 0;">
+        <div class="row align-items-center search-header">
+          <div class="col-auto">
+            <i class="fas fa-chevron-left" style="font-size: 1.7em; visibility: hidden;"></i>
+          </div>
+          <div class="col search-input">
+            <ion-item class="custom-ion-input filter-input location">
+              <ion-icon class="primary-color {{'side-margin-icon-' + rootComponent.direction}}" name="location-outline">
+              </ion-icon>
+              <ion-input placeholder="{{'Location' | translate}}">
+              </ion-input>
+              <ion-icon name="locate-outline"></ion-icon>
+            </ion-item>
+            <ion-item class="custom-ion-input filter-input category">
+              <ion-icon class="primary-color {{'side-margin-icon-' + rootComponent.direction}}" name="grid-outline">
+              </ion-icon>
+              <ion-select placeholder="{{'Category' | translate}}" multiple="true" okText="Okay" cancelText="Dismiss">
+                <ion-select-option value="all">All</ion-select-option>
+                <ion-select-option value="brown">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item class="custom-ion-input filter-input sub-category">
+              <ion-icon class="primary-color {{'side-margin-icon-' + rootComponent.direction}}" name="list-outline">
+              </ion-icon>
+              <ion-select placeholder="{{'Sub-Category' | translate}}" multiple="true" okText="Okay"
+                cancelText="Dismiss">
+                <ion-select-option value="all">All</ion-select-option>
+                <ion-select-option value="brown">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item class="custom-ion-input filter-input price-range">
+              <i class="fas fa-money-bill-alt primary-color {{'side-margin-icon-' + rootComponent.direction}}"></i>
+              <ion-input placeholder="{{'min' | translate}} ({{'TND' | translate}})" type="number">
+              </ion-input>
+              <span style="padding-right: 5px; padding-left: 5px; color: #9b9b9b; font-weight: bold;">-</span>
+              <ion-input placeholder="{{'max' | translate}} ({{'TND' | translate}})" type="number">
+              </ion-input>
+            </ion-item>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-filter" style="font-size: 1.7em; visibility: hidden;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row search-mode">
+      <div class="col {{'mode-list-' + rootComponent.direction}}" style="padding-top: 0; padding-bottom: 0;">
+        <ion-button class="search-mode-btn" [ngClass]="{'active-mode': !isMapMode}" (click)="switchMode('LIST')">
+          <ion-icon class="primary-color {{'side-margin-icon-' + rootComponent.direction}}" name="list-outline">
+          </ion-icon>
+          {{'List' | translate}}
+        </ion-button>
+      </div>
+      <div class="col {{'mode-map-' + rootComponent.direction}}" style="padding-top: 0; padding-bottom: 0;">
+        <ion-button class="search-mode-btn" [ngClass]="{'active-mode': isMapMode}" (click)="switchMode('MAP')">
+          <ion-icon class="primary-color {{'side-margin-icon-' + rootComponent.direction}}" name="map-outline">
+          </ion-icon>
+          {{'Map' | translate}}
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+  <ion-slides class="search-results" (ionSlidePrevStart)="switchMode('SLIDER_EVENT')"
+    (ionSlideNextStart)="switchMode('SLIDER_EVENT')" #slides>
+    <ion-slide class="list">
+      <br> List
+    </ion-slide>
+    <ion-slide  class="map">
+      <br> Map
+    </ion-slide>
+  </ion-slides>
+</ion-content>

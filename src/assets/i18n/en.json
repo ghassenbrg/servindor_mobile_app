@@ -45,5 +45,13 @@
     "Requests": "Requests",
     "Messages": "Messages",
     "Account": "Account",
-    "Change phone number": "Change phone number"
+    "Change phone number": "Change phone number",
+    "Location": "Location",
+    "Category": "Category",
+    "Sub-Category": "Sub-Category",
+    "min": "min",
+    "max": "max",
+    "TND": "TND",
+    "List": "List",
+    "Map": "Map"
 }

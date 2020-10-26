@@ -45,5 +45,13 @@
     "Requests": "الطلبات",
     "Messages": "الرسائل",
     "Account": "الحساب",
-    "Change phone number": "غيّر رقم الهاتف"
+    "Change phone number": "غيّر رقم الهاتف",
+    "Location": "موقعك",
+    "Category": "الفئة",
+    "Sub-Category": "الفئة الفرعيّة",
+    "min": "الأدنى",
+    "max": "الأقصى",
+    "TND": "د.ت",
+    "List": "قائمة",
+    "Map": "خريطة"
 }
