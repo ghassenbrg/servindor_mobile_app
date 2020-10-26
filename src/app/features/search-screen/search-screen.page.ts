@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Location } from "@angular/common";
 import { AppComponent } from 'src/app/app.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { IonSlides } from '@ionic/angular';
+import { IonContent, IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-search-screen',
@@ -26,7 +26,8 @@ export class SearchScreenPage implements OnInit {
   filterCurrentState = 'close';
   @ViewChild('searchInput', { static: false }) searchInput: { setFocus: () => void; };
   @ViewChild(IonSlides, { static: false }) slides: IonSlides;
-
+  @ViewChild('content', { static: false }) content: IonContent;
+  
   constructor(
     public rootComponent: AppComponent,
     public location: Location
@@ -42,13 +43,13 @@ export class SearchScreenPage implements OnInit {
   switchMode(btnType?: string) {
     if (this.isMapMode && btnType == 'LIST') {
       this.slides.slidePrev();
-      //this.isMapMode = false;
     } else if (!this.isMapMode && btnType == 'MAP') {
       this.slides.slideNext();
-      //this.isMapMode = true;
     } else if (btnType == 'SLIDER_EVENT') {
       this.isMapMode = !this.isMapMode;
     }
+    this.content.scrollToTop(400);
+
   }
 
   changeFilterState() {

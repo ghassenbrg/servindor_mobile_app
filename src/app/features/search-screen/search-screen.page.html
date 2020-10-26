@@ -89,7 +89,7 @@
     </div>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content #content  [scrollEvents]="true" >
   <ion-slides class="search-results" (ionSlidePrevStart)="switchMode('SLIDER_EVENT')"
     (ionSlideNextStart)="switchMode('SLIDER_EVENT')" #slides>
     <ion-slide class="list">
